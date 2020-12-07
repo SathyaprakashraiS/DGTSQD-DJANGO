@@ -25,6 +25,7 @@ from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.urls import reverse_lazy
 from .models import report
 from .forms import Report
+import pil
  
 # Create your views here.
 def comment(request):
