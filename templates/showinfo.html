@@ -1,0 +1,193 @@
+<!doctype html>
+{%load static %}
+{% static 'images' as base %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--google icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>TECH BYTES</title>
+  </head>
+  <body>
+   <link rel='stylesheet'  href="{% static 'CSS\master.css' %}">
+<nav class="navbar fixed-top navbar-expand-sm bg-light">
+<nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
+<!--
+<div class="card" style="width: 200px;">
+      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
+  </div>
+-->
+<div style="width: 200px;">
+      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/basic"><span class="material-icons">home</span>HOME<!--<span class="sr-only">(current)</span>--></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="color: #ff4500" href="/newspost"><span class="material-icons">article</span>TECH BYTES</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="/achievements"><span class="material-icons">emoji_events</span>ACHIEVEMENTS</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="/project"><span class="material-icons">star</span>PROJECTS</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="/events"><span class="material-icons">school</span>EVENTS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/tmembers"><span class="material-icons">engineering</span>TOP SQUAD MEMBERS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/news"><span class="material-icons">text_snippet</span>NEWS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/comment"><span class="material-icons">message</span>REVIEW</a>
+      </li>
+      {% if user.is_authenticated %}
+      <div style="border-radius:50%" class="btn-group">
+     <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      PROFILE
+     </button>
+      <div class="dropdown-menu">
+               <a class="dropdown-item" href="/viewprofile">EDIT PROFILE</a>
+              <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="/dispprofile">VIEW PROFILE</a>
+              </div>
+                
+        <li class="nav-item">
+        <a class="nav-link" href="/logout"><span class="material-icons">lock_open</span>LOGOUT</a>
+      </li>
+      {% else %}
+     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/login"><span class="material-icons">login</span>SIGNUP</a>
+      </li>
+      {% endif %}
+    
+  
+
+</div>
+    </ul>
+    <span class="navbar-text">
+     <!--text here-->
+    </span>
+  </div>
+</nav>
+</nav>
+<br><br><br>
+<h1 style="text-align:center;color:#FFFFFF"><b>LATEST TECT BYTES</b></h1>
+<br><br>
+     a
+    <h1>b</h1>
+       
+ 
+
+
+
+ 
+<nav class="navbar fixed-bottom navbar-expand-sm bg-light">
+<nav class="navbar fixed-bottom navbar-expand-lg navbar-warning bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/basic"><span class="material-icons">home</span>HOME</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="/members"><span class="material-icons">emoji_people</span>MEMBERS</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="/pybot"><span class="material-icons">location_searching</span>SQUAD SEARCH</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="/aboutus"><span class="material-icons">mail</span>ABOUT US</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="/contactus"><span class="material-icons">phonelink_ring</span>CONTACT US</a>
+      </li>
+      {% if request.user.is_superuser %}
+          <li class="nav-item">
+          <a class="nav-link" href="/upload"><span class="material-icons">question_answer</span>BYTES UPLOAD</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/uploadevents"><span class="material-icons">question_answer</span>EVENTS UPLOAD</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/uploadproject"><span class="material-icons">question_answer</span>PROJECT UPLOAD</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/addachievements"><span class="material-icons">question_answer</span>ACHIEVEMENTS UPLOAD</a>
+          </li>
+      {% else %}
+      {% endif %}
+    </ul>
+    <span class="navbar-text">
+     <!--text here-->
+    </span>
+  </div>
+</nav>
+</nav>
+
+ <style type="text/css">
+   body 
+   {  
+   }
+   .card{
+    padding-top: 30px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    margin-left:35px;
+    margin-right:20px;
+    margin-up:40px;
+    margin-down:20px;
+    background-color:#000000;
+    border-radius:50px;
+
+   } 
+   
+   .im{
+     size:30px;
+     height:400px;
+     transition: transform .2s;
+   }
+   .im:hover {
+  transform: scale(1.15);
+}
+   .car{
+    float: left;
+    width: 33.33%;
+    padding: 1px;
+    background-color:#FF0000;
+   } 
+   .bike {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+</style>
+  </body>
+  <body id="bg" style="background-image: url('{% static "images/news1.jpg"%}');background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-size:100%; ">
+  </body>
+</html>
+

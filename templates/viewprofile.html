@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+ <!--font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+<body>
+<!--page-->
+<div id="fm">
+<div id="img-b">
+ <img id="img" class="card-img-top" src="{{user.userprofile.img.url}}" alt="Card image"></div>
+<form method="POST" enctype="multipart/form-data" id="log" >
+{% csrf_token %}
+
+<div>
+<h1 style="color:black; font-family:cursive">USER PROFILE</h1>
+
+</div>
+
+<div  id="box"class="input-group-append mb-4">
+    <spanclass="input-group-text" ></span>
+     <div id="name"><i id="icon1"class="fas fa-user"></i><span style=" color:black; font-family:cursive">USERNAME:</span>{{e_form.username}}</div>
+</div>
+<br><br>
+<div id="box" class="profile card-img-top">
+       
+        <div ><i id="icon1"class="fas fa-user-circle"></i>{{u_form.img}}</div>
+        
+</div>
+<div class="input-group mb-3">
+    <div id="email" class="input-group-append">
+        
+        <div ><i id="icon1"class="fas fa-paper-plane"></i><span style="color:black; font-family:cursive">EMAIL:</span>{{e_form.email}}</div>
+        
+    </div>
+ <div id="about" class="input-group-append">
+         
+    <div ><i id="icon1"class="fas fa-comment"></i><span style="color:black; font-family:cursive overflow-wrap: break-word;">ABOUT:</span>{{u_form.about}}</div>
+     
+</div>
+</div>
+    <div id="box4"class="d-flex justify-content-center mt-3 login_container">
+        <input class="btn login_btn" type="submit" value="UPDATE">
+    </div><br>
+     <a href="/basic"><button style="background-color:red;"type="button">BACK HOME</button></a>
+<div>
+
+</div>
+</form>
+</div>
+</body>
+<body id="bg" style="background-image: url('{% static "images/qw4.jpg"%}'); background-size: cover; background-size:100%;"></body> 
+</html>
+<style>
+
+body{
+  
+
+}
+#fm{
+
+    width: 500px;
+    height:600px;
+    margin-top:5rem;
+    margin-bottom: auto;
+    margin-left:30rem;
+    margin-right:20rem;
+    background: yellow;
+    position: relative;
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    padding:10px;
+    border: 8px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+#log{
+  text-align:center;
+}
+#box{
+    
+    margin-bottom: 10px;
+    margin-left:3rem;
+
+    padding-top:10px;
+    padding-down:0px;
+    border-radius: 0.25rem 0 0 0.25rem !important;
+}
+#email{
+    margin-right:50px;
+}
+#about{
+    margin-top:10px;
+    margin-left:40px;
+}
+#box2{
+     width:200px;
+    height:30px;
+    margin-bottom: 10px;
+}
+#icon1{
+    color:black;
+    border-radius:5px;
+    box-color:red;
+    
+}
+#box3{
+    background-color:silver;
+}
+.login_btn {
+    width: 80px;
+    height:20px;
+    background: #33ccff !important;
+    color: white !important;
+    margin-top:10px;
+}
+#img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    margin-left:10px;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-right:20px;
+
+}
+#img-b{
+      width:120px;
+     height:120px;
+     border-radius:50%;
+     background-color: #FF0000;
+     margin-left:12rem;
+  }
+#id_username{
+    width:250px;
+    height:20px;
+    
+    
+   
+   
+
+}
+.fas {
+    width:30px;
+    height:30px;
+    padding-right:0px;
+    padding-left:30px;
+}
+#id_about{
+    width:300px;
+    height:50px;
+}
+#id_img{
+    margin-bottom:10px;
+    padding-bottom:10px;
+    color:black; 
+    font-family:cursive;
+}
+#id_email{
+    margin-right:3rem;
+}
+#name{
+   margin-right:20px;
+}
+</style>

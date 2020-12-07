@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+ <!--font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+<body>
+<!--page-->
+<div id="fm">
+<form method="post" id="log" >
+{% csrf_token %}
+<div>
+    <title>LOGIN</title>
+<h1 style="color:black;">USER LOGIN</h1>
+</div>
+<div  id="box"class="input-group-append mb-3">
+    <span class="input-group-text" ><i id="icon1"class="fas fa-user"></i></span>
+    <!--<input id="box" type="text" placeholder="name">-->
+    {{form.username}}
+</div>
+<div class="input-group mb-3">
+    <div id="box" class="input-group-append">
+        <span class="input-group-text"><i class="fas fa-key"></i></span>
+        <!--<input id="box2" type="password" placeholder="enter the password">-->
+        {{form.password}}
+    </div>
+
+</div>
+    <div id="box4"class="d-flex justify-content-center mt-3 login_container">
+        <input class="btn login_btn" type="submit" value="login">
+    </div>
+<br><br>
+<div id="box3">
+<span>DONT HAVE AN ACCOUNT?<br> CREATE NEW ONE HERE-><a href="/register">click here</a></span>
+</div>
+</form>
+</div>
+</body>
+</html>
+<body id="bg" style="background-image: url('{% static "images/lo.jpg"%}'); background-size: cover; background-size:100%;"> 
+   <!-- </div>  -->
+  </body>  
+<style>
+
+body{
+  background-color:#ff0000;
+
+}
+#fm{
+
+    width: 390px;
+    height:280px;
+    margin-top:17rem;
+    margin-bottom: auto;
+    margin-left:34rem;
+    margin-right:26rem;
+    background: #03389E;
+    position: relative;
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    padding:10px;
+    border: 8px solid black;
+    border-radius:0%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+#log{
+  text-align:center;
+}
+#box{
+    
+    width:200px;
+    height:30px;
+    margin-bottom: 10px;
+    margin-left:76px;
+    border-radius: 0.25rem 0 0 0.25rem !important;
+}
+#box2{
+     width:200px;
+    height:30px;
+    margin-bottom: 10px;
+}
+#icon1{
+    color:black;
+    border-radius:5px;
+    box-color:red;
+    
+}
+#box3{
+    background-color:silver;
+}
+.login_btn {
+    width: 80px;
+    height:20px;
+    background: #FF0000 !important;
+    color: white !important;
+    margin-top:10px;
+}
+</style>

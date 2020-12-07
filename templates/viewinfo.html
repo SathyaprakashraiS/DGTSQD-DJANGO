@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+ <!--font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<body>
+<title>TECH BYTE</title>
+<!--page-->
+<h1 style="text-align: center;color:#FFFFFF">BYTES INFO !</h1><br>
+<div>
+<div id="fm" class="card">
+  <img id="img" src="{{obj.img.url}}" alt="name"><br><br>
+  <p id="text"><b>{{obj.info}}</b></p>
+  <br><br><br>
+  <a href="/newspost"><button type="button">BACK</button></a>
+</div></div>
+</body>
+<body id="bg" style="background-image: url('{% static "images/news1.jpg"%}'); background-size: cover; background-size:100%;"></body> 
+
+</html>
+<style>
+
+body{
+  
+
+}
+#fm{
+
+    width: 600px;
+    height:550px;
+    margin-top:3rem;
+    margin-bottom: auto;
+    margin-left:27rem;
+    margin-right:20rem;
+    background: yellow;
+    position: relative;
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    padding:10px;
+    border: 8px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.card{
+
+     animation-name:rainbow;
+       animation-duration:4s;
+       animation-iteration-count: infinite;
+
+
+  }
+  @keyframes rainbow {
+  0% {
+    background-color: #FFEEFF;
+  }
+  50% {
+    background-color: #0088EE;
+  }
+   100% {
+    background-color: yellow;
+  }
+}
+#log{
+  text-align:center;
+}
+#box{
+    
+    margin-bottom: 10px;
+    margin-left:3rem;
+    padding-top:10px;
+    padding-down:0px;
+    border-radius: 0.25rem 0 0 0.25rem !important;
+}
+#box2{
+     width:200px;
+    height:30px;
+    margin-bottom: 10px;
+}
+#icon1{
+    color:black;
+    border-radius:5px;
+    box-color:red;
+    
+}
+#box3{
+    background-color:silver;
+}
+.login_btn {
+    width: 80px;
+    height:20px;
+    background: #33ccff !important;
+    color: white !important;
+    margin-top:10px;
+}
+#img{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    margin-left:12rem;
+    border:10px solid red;
+
+
+}
+#id_username{
+    width:250px;
+    height:20px;
+    margin-left:10px;
+    margin-right:2rem;
+    
+   
+   
+
+}
+.fas {
+    width:30px;
+    height:30px;
+    padding-right:0px;
+    padding-left:30px;
+}
+#id_about{
+    width:300px;
+    height:50px;
+}
+#id_img{
+    margin-bottom:10px;
+    padding-bottom:10px;
+}
+#id_email{
+    margin-right:3rem;
+}
+</style>

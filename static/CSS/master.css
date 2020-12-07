@@ -1,0 +1,36 @@
+body{
+    color: black;
+    font-size: large;    
+}
+
+
+.card {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+
+
+
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  #bg{
+    background-repeat: no-repeat;
+    background-size:1080px 800px;
+    background-position:top;
+    background-attachment: fixed;
+  }
+
+  /* Style the counter cards */

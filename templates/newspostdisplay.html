@@ -1,0 +1,244 @@
+<!doctype html>
+{%load static %}
+{% static 'images' as base %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--google icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>TECH BYTES</title>
+  </head>
+  <body>
+   <link rel='stylesheet'  href="{% static 'CSS\master.css' %}">
+<nav class="navbar fixed-top navbar-expand-sm bg-light">
+<nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
+<!--
+<div class="card" style="width: 200px;">
+      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
+  </div>
+-->
+<div style="width: 200px;">
+      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" style="color: #000000" href="/basic"><div class="hello"><span class="material-icons">home</span>HOME<!--<span class="sr-only">(current)</span>--></div></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="color: #ff4500" href="/newspost"><div class="hello"><span class="material-icons">article</span>TECH BYTES</div></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="color: #000000" href="/achievements"><div class="hello"><span class="material-icons">emoji_events</span>ACHIEVEMENTS</div></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="color: #000000" href="/project"><div class="hello"><span class="material-icons">star</span>PROJECTS</div></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="color: #000000" href="/events"><div class="hello"><span class="material-icons">school</span>EVENTS</div></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color: #000000" href="/tmembers"><div class="hello"><span class="material-icons">engineering</span>TOP SQUAD MEMBERS</div></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color: #000000" href="/news"><div class="hello"><span class="material-icons">text_snippet</span>NEWS</div></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color: #000000" href="/comment"><div class="hello"><span class="material-icons">message</span>REVIEW</div></a>
+      </li>
+      {% if user.is_authenticated %}
+      <div style="border-radius:50%" class="btn-group">
+     <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      {{request.user.username}}
+     </button>
+      <div class="dropdown-menu">
+               <a class="dropdown-item" href="/viewprofile">EDIT PROFILE</a>
+              <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="/dispprofile">VIEW PROFILE</a>
+              </div>
+                
+        <li class="nav-item">
+        <a class="nav-link" style="color: #000000" href="/logout"><div class="hello"><span class="material-icons">lock_open</span>LOGOUT</div></a>
+      </li>
+      {% else %}
+     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" style="color: #000000" href="/login"><div class="hello"><span class="material-icons">login</span>SIGNUP</div></a>
+      </li>
+      {% endif %}
+    
+  
+
+</div>
+    </ul>
+    <span class="navbar-text">
+     <!--text here-->
+    </span>
+  </div>
+</nav>
+</nav>
+<br><br><br>
+<h1 style="text-align:center;color:#FFFFFF"><b>LATEST TECT BYTES</b></h1>
+<br><br>
+  {% for i in obj reversed %}
+    <div class="card" style="width: 27.5rem;">
+      <img src="{{i.img.url}}" class="im" alt="not found">
+      <form  action="viewinfo/<tager>">
+      {% csrf_token %}
+       <!--<a type="submit" name="info" value={{i.pk}} href="viewinfo/">...moreinfo</a></h5>-->
+       <button type="submit" name="info" value="{{i.pk}}" class="btnm">PEEK INTO FOR MORE INFO</button>
+       </form>
+     </div>
+ {% endfor %}
+
+
+
+ 
+<nav class="navbar fixed-bottom navbar-expand-sm bg-light">
+<nav class="navbar fixed-bottom navbar-expand-lg navbar-warning bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" style="color: #000000" href="/basic"><div class="hello"><span class="material-icons">home</span>HOME</div></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="color: #000000" href="/members"><div class="hello"><span class="material-icons">emoji_people</span>MEMBERS</div></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="color: #000000" href="/pybot"><div class="hello"><span class="material-icons">location_searching</span>SQUAD SEARCH</div></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="color: #000000" href="/aboutus"><div class="hello"><span class="material-icons">mail</span>ABOUT US</div></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="color: #000000" href="/contactus"><div class="hello"><span class="material-icons">phonelink_ring</span>CONTACT US</div></a>
+      </li>
+      <!--{% if request.user.is_superuser %}
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+         <li class="nav-item">
+          <a class="nav-link" href="/upload"><span class="material-icons">question_answer</span>BYTES UPLOAD</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/uploadevents"><span class="material-icons">question_answer</span>EVENTS UPLOAD</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/uploadproject"><span class="material-icons">question_answer</span>PROJECT UPLOAD</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/addachievements"><span class="material-icons">question_answer</span>ACHIEVEMENTS UPLOAD</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/reportnews"><span class="material-icons">question_answer</span>ADD NEWS</a>
+          </li>-->
+           <!--
+       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  ADMIN UPLOADS
+</button>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">UPLOADS</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <a class="nav-link" href="/upload"><span class="material-icons">question_answer</span>BYTES UPLOAD</a>
+         <a class="nav-link" href="/uploadevents"><span class="material-icons">question_answer</span>EVENTS UPLOAD</a>
+         <a class="nav-link" href="/uploadproject"><span class="material-icons">question_answer</span>PROJECT UPLOAD</a>
+         <a class="nav-link" href="/reportnews"><span class="material-icons">question_answer</span>ADD NEWS</a>
+         <a class="nav-link" href="/addachievements"><span class="material-icons">question_answer</span>ACHIEVEMENTS UPLOAD</a
+      ></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+      {% else %}
+      {% endif %}-->
+    </ul>
+    <span class="navbar-text">
+     <!--text here-->
+    </span>
+  </div>
+</nav>
+</nav>
+
+ <style type="text/css">
+   body 
+   {  
+   }
+   .card{
+    padding-top: 30px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    margin-left:35px;
+    margin-right:20px;
+    margin-up:40px;
+    margin-down:20px;
+    background-color:#000000;
+    border-radius:50px;
+
+   } 
+   .hello:hover{
+    color:red;
+}
+   .im{
+     size:30px;
+     height:400px;
+     transition: transform .2s;
+   }
+   .im:hover {
+  transform: scale(1.05);
+}
+   .car{
+    float: left;
+    width: 33.33%;
+    padding: 1px;
+    background-color:#FF0000;
+   } 
+   .bike {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  .btnm{
+    padding: 0;
+    border: none;
+    background: none;
+    color:blue;
+  }
+  .btnm:hover{
+    font-style:underline;
+    transform: scale(1.15);
+  }
+</style>
+  </body>
+  <body id="bg" style="background-image: url('{% static "images/news1.jpg"%}');background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-size:100%; ">
+  </body>
+</html>
+

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOL</title>
+	{% if user.is_authenticated %}
+      {% block content %}
+        <h1>hello LOGINed USER</h1>
+        <p>{{name}}</p>
+      {% endblock %}
+    {% else %}
+      <p><a href="/login">LOGIN</a></p>
+    {% endif %}
+</head>
+<body>
+
+</body>
+</html>

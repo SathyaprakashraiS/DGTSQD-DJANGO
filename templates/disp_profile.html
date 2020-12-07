@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+ <!--font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<body>
+<!--page-->
+<div>
+<div id="fm" class="card">
+  <img id="img" src="{{user.userprofile.img.url}}" alt="name">
+  <p id="text"><span>NAME:</span>{{user.username}}</p>
+ 
+  <p id="text"><span>EMAIL:</span>{{user.email}}</p>
+   <p id="text"><span style="overflow-wrap: break-word;">ABOUT:</span>{{user.userprofile.about}}</p>
+
+  <br><br><br>
+  <a href="/basic"><button type="button">BACK HOME</button></a>
+</body>
+<body id="bg" style="background-image: url('{% static "images/qw4.jpg"%}'); background-size: cover; background-size:100%;"></body> 
+
+</html>
+<style>
+
+body{
+  
+
+}
+#fm{
+
+    width: 300px;
+    height:450px;
+    margin-top:8rem;
+    margin-bottom: auto;
+    margin-left:37rem;
+    margin-right:20rem;
+    background: yellow;
+    position: relative;
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    padding:10px;
+    border: 8px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.card{
+
+     animation-name:rainbow;
+       animation-duration:4s;
+       animation-iteration-count: infinite;
+
+
+  }
+  @keyframes rainbow {
+  0% {
+    background-color: #FFEEFF;
+  }
+  50% {
+    background-color: #0088EE;
+  }
+   100% {
+    background-color: yellow;
+  }
+}
+#log{
+  text-align:center;
+}
+#box{
+    
+    margin-bottom: 10px;
+    margin-left:3rem;
+    padding-top:10px;
+    padding-down:0px;
+    border-radius: 0.25rem 0 0 0.25rem !important;
+}
+#box2{
+     width:200px;
+    height:30px;
+    margin-bottom: 10px;
+}
+#icon1{
+    color:black;
+    border-radius:5px;
+    box-color:red;
+    
+}
+#box3{
+    background-color:silver;
+}
+.login_btn {
+    width: 80px;
+    height:20px;
+    background: #33ccff !important;
+    color: white !important;
+    margin-top:10px;
+}
+#img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    margin-left:6rem;
+    border:10px solid red;
+
+
+}
+#id_username{
+    width:250px;
+    height:20px;
+    margin-left:10px;
+    margin-right:2rem;
+    
+   
+   
+
+}
+.fas {
+    width:30px;
+    height:30px;
+    padding-right:0px;
+    padding-left:30px;
+}
+#id_about{
+    width:300px;
+    height:50px;
+}
+#id_img{
+    margin-bottom:10px;
+    padding-bottom:10px;
+}
+#id_email{
+    margin-right:3rem;
+}
+</style>
