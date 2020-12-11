@@ -9,3 +9,10 @@ python-decouple==3.3
 SpeechRecognition==3.8.1
 wolframalpha==4.0.0
 pillow==8.0.1
+dj-database-url==0.5.0
+sqlparse==0.4.1
+pytz==2020.1
+django_storages==1.10.1
+azure-storage_common==2.1.0
+azure-common==1.1.5
+azure-storage-blob==2.1.0

@@ -93,7 +93,7 @@
 <div class="input-group mb-3 w-25">
   <div class="input-group-prepend">
  
-    <span class="input-group-text" id="inputGroup-sizing-default">NAME</span>
+    <span  class="input-group-text" id="inputGroup-sizing-default">NAME</span>
   </div>
   <input type="text" name ="head" placeholder="enter your name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
 </div>
@@ -114,8 +114,8 @@
  <h1 style="text-align:center;"><a style="color: #11EBF3">HEAR FROM OUR TOP USER'S</a></h1>
 {% for i in obj reversed%}
 <ul class="list-group">
-  <li class="list-group-item w-25 mt-3"><b>NAME  :</b>{{i.name}}</li>
-  <li  style="overflow-wrap: break-word;"class="list-group-item w-25"><b>COMMENT  :</b>{{i.comment}}</li>
+  <li class="list-group-item w-25 mt-3" ><b>NAME  :</b>{{i.name}}</li>
+  <li  style="overflow-wrap: break-word;" class="list-group-item w-25"><b>COMMENT  :</b>{{i.comment}}</li>
   
  </ul>
 {% endfor %}

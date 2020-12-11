@@ -92,11 +92,12 @@
   <br><br><br>
   <h1 style="text-align:center;color:#FFFFFF"><b>SQUAD MATES</b></h1>
 {% for i in obj %}
+
   <div class="card">
   <img id="img" class="card-img-top" src="{{i.img.url}}" alt="Card image">
   <div class="card-body">
     <h4 value="{{i.user.username}}"class="card-title" style="color: #FFFFFF">{{i.user.username}}</h4> 
-    <!-- <p  class="card-text" style=" width:200px; color:white; overflow-wrap: break-word;">{{i.about}}</p>  -->
+    <!-- <p  class="card-text" style=" width:200px; color:white; overflow-wrap: break-word;">{{i.about}}</p> -->
     
     <form action="profile/<tager>">{% csrf_token %}
   
@@ -105,6 +106,22 @@
   </div>
 </div>
 </div>
+
+<!--
+<div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+  <div class="card-header">NOTHING</div>
+  <div class="card-text">SOMETHING</div>
+  <img id="img" class="card-img-top" src="{{i.img.url}}" alt="Card image">
+  <div class="card-body">
+    <h4 value="{{i.user.username}}"class="card-title" style="color: #FFFFFF">{{i.user.username}}</h4> 
+    <form action="profile/<tager>">{% csrf_token %}
+</form>
+  </div>
+</div></div>
+</div>
+</div>
+</div>
+-->
 {% endfor %}
 
 <br><br><br><br><br>
@@ -228,8 +245,15 @@
     display:grid;
     grid-row-gap:10px;
     grid-column-gap:20px;
-   
+   animation-name:rainbow;
+    animation-duration:0.5s;
+    animation-iteration-count: infinite;
    }
+   .card:hover{
+    
+   }
+   
+}
    .class-body{
      grid-gap: 20px 50px;
      display:grid;
