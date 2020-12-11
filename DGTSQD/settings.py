@@ -30,7 +30,7 @@ SECRET_KEY = 'qw4&)y+1=d8&o))=@*@zk2n(e=u(b=p3&o)16^cbq!kyj4dr_+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','digitsquad']
+ALLOWED_HOSTS = ['127.0.0.1','digitsquad','*','dgtsqdsite.azurewebsites.net']
 
 
 # Application definition
