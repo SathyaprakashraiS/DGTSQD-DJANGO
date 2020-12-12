@@ -34,7 +34,7 @@ class project(models.Model):
 class UserProfile(models.Model):
    user = models.OneToOneField(User,on_delete=models.CASCADE)
    phone = models.CharField(max_length=256, blank=True, null=True)
-   img = models.ImageField(upload_to='images', default='static/images/dlogo.jpeg')
+   img = models.ImageField(upload_to='images', default='images/dlogo.jpeg')
    about = models.CharField(max_length=50000, default='NOT YET POSTED MY ABOUT')
    idcard=models.CharField(max_length=10,default='100')
    
