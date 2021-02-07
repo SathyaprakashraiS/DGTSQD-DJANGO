@@ -17,19 +17,14 @@
   <body>
   <link rel='stylesheet'  href="{% static 'CSS\master.css' %}">
   <!--NAV BAR--       <nav class="navbar navbar-dark bg-dark">     -->
- <nav class="navbar fixed-top navbar-expand-sm bg-light">
-<nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
-<!--
-<div class="card" style="width: 200px;">
-      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
-  </div>
--->
-<div style="width: 200px;">
-      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
-  </div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+ <nav class="navbar fixed-top navbar-dark bg-light">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
+<div >
+      <img style="width:200px ;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
+      <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
+
   </button>
+  </div>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
@@ -92,32 +87,35 @@
 
 
 
-<body id="bg" style="background-image: url('{% static "images/q3.jpg"%}'); background-size: cover; background-size:100%;"> </body>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-&emsp;&emsp;&emsp;&emsp;&emsp;
+
+<br><br><br>
+<div class="grid-container">
+<div class="grid-item">
 <a href="https://www.instagram.com/digitsquad_vit/"><i class="fa fa-instagram" style="font-size:100px;color:#FF0000" ></i></a>
 <b><a style="font-size:20px;color:#FFFFFF"><a href="https://www.instagram.com/digitsquad_vit/" style="color:#FF0000">
-INSTAGRAM</a></a></b>&emsp;&emsp;&emsp;&emsp;&emsp;
+INSTAGRAM</a></a></b></div>
 
+<div class="grid-item">
 <a href="https://www.facebook.com/digitsquadvitv/"><i  class="fa fa-facebook" style="font-size:100px;color:#0000FF" ></i></a>
 <b><a style="font-size:20px;color:#FFFFFF"><a href="https://www.facebook.com/digitsquadvitv/">
-FACEBOOK</a></a></b>  &emsp;&emsp;&emsp;&emsp;&emsp;
+FACEBOOK</a></a></b> </div>
 
+<div class="grid-item">
 <a href="#"><i class="fa fa-twitter" style="font-size:100px;color:#00AAFF" ></i></a>
-<b><a style="font-size:20px;color:#FFFFFF">TWITTER</a></b>&emsp;&emsp;&emsp;&emsp;&emsp;
-
+<b><a style="font-size:20px;color:#FFFFFF">TWITTER</a></b></div>
+<div class="grid-item">
 <a href="https://www.youtube.com/channel/UCXpIVRiyfsMB2aXXn2yq6LA"><i class="fa fa-youtube" style="font-size:100px;color:#FF0000" ></i></a>
 <b><a style="font-size:20px;color:#FFFFFF"><a href="https://www.youtube.com/channel/UCXpIVRiyfsMB2aXXn2yq6LA "style="color:#FF0000">
-YOUTUBE</a></a></b>  &emsp;&emsp;&emsp;&emsp;&emsp;
+YOUTUBE</a></a></b></div>
 
-<a href="#"><i class="fa fa-linkedin" style="font-size:100px;color:#00AAFF" ></i></a>
-<b><a style="font-size:20px;color:#FFFFFF">LINKEDIN</a></b>
+<div class="grid-item"><a href="#"><i class="fa fa-linkedin" style="font-size:100px;color:#00AAFF" ></i></a>
+<b><a style="font-size:20px;color:#FFFFFF">LINKEDIN</a></b></div>
+</div>
 
-
-
-<nav class="navbar fixed-bottom navbar-expand-sm bg-light">
-<nav class="navbar fixed-bottom navbar-expand-lg navbar-warning bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+<br><br><br><br><br>
+<nav class="navbar navbar-expand-sm fixed-bottom bg-light">
+<nav class="navbar navbar-expand-lg fixed-bottom navbar-warning bg-light">
+  <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
@@ -195,6 +193,10 @@ YOUTUBE</a></a></b>  &emsp;&emsp;&emsp;&emsp;&emsp;
   </body>
   
 <style type="text/css">
+  body
+  {
+    background-image: url('{% static "images/q3.jpg"%}');background-repeat: no-repeat;background-attachment: fixed;background-size: cover;>
+  }
   #social {
      text-align:center;
      background-color:#000000
@@ -203,16 +205,38 @@ YOUTUBE</a></a></b>  &emsp;&emsp;&emsp;&emsp;&emsp;
      padding :00px;
     
    }
-   .container{
-     padding-top: 20px;
-    padding-right: 5px;
-    padding-bottom: 20px;
-    padding-left: 200px;
+    .grid-container{
+      width:100px;
+      height:100px;
+      display: inline-grid;
+      justify-content: space-evenly;
+     margin-left:45%;
+     grid-row-gap: 40px;
+     grid-column-gap:50px;
+     grid-template-columns: auto auto auto auto auto;
+     margin-bottom:40px;
+     margin-top:200px;
+     padding-bottom:40px;
 
    }
-   <style type="text/css">
-   body 
-   { background: yellow !important; 
+   .grid-item{
+     margin-bottom:30px;
+     grid-template-columns: auto auto;
+   }
+   @media(max-width:767.98px){
+   .grid-container{
+     margin-left:38%;
+     margin-bottom:40px;
+     padding-bottom:40px;
+     margin-top:10%;
+      display: inline-grid;
+      grid-template-columns: auto ;
+      justify-content: space-evenly;
+
+   }
+   .grid-item{
+     margin-bottom:30px;
+   }
    }
    .card{
     padding-top: 0px;
@@ -221,8 +245,8 @@ YOUTUBE</a></a></b>  &emsp;&emsp;&emsp;&emsp;&emsp;
     padding-left: 0px;
     margin-left:0px;
     margin-right:0px;
-    margin-up:0px;
-    margin-down:0px;
+    margin-top:0px;
+    margin-bottom:0px;
     background-color:#FF0000;
     border-radius:0px;
 
@@ -230,6 +254,7 @@ YOUTUBE</a></a></b>  &emsp;&emsp;&emsp;&emsp;&emsp;
    .hello:hover{
     color:red;
 }
+
 </style>
    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

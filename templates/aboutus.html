@@ -15,19 +15,15 @@
   <body>
   <link rel='stylesheet'  href="{% static 'CSS\master.css' %}">
   <!--NAV BAR--       <nav class="navbar navbar-dark bg-dark">     -->
- <nav class="navbar fixed-top navbar-expand-sm bg-light">
-<nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
-<!--
-<div class="card" style="width: 200px;">
-      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
-  </div>
--->
+ <nav class="navbar fixed-top navbar-dark bg-light">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
 <div style="width: 200px;">
-      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
-  </div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <img style="width:200px ;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
+      <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
+       
     <span class="navbar-toggler-icon"></span>
   </button>
+  </div>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
@@ -87,12 +83,13 @@
 
 
 
-
+<br><br><br><br>
 <!--<div class="container my-5 w-100"> -->
 <div id="carousel" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{% static 'images/about2.jpg' %}" class="d-block w-100" alt="OOPS IMAGE ERROR">
+      <img src="{% static 'images/about2.jpg' %}" class="d-block" alt="OOPS IMAGE ERROR">
+
     </div>
   </div>
 </div>
@@ -101,19 +98,20 @@
 
 
 
-<h1 style="text-align:center;">About DIGIT SQUAD</h1><br>
+<h1 style="text-align:center;" class="font">ABOUT DIGIT SQUAD</h1><br>
 Digit Squad is an exclusive group of premier technology enthusiasts in India, who practically live and breathe all things technology.Digit SQUAD is part of Digit.
 in, an Indian technology media publisher owned by 9.9 Group.<br>
 <!--<h1>About Digit</h1>-->
 For the past 15 years, we’ve been steadfast in our mission to be your most trusted friend when it comes to everything you may want to or should know about technology.<br>
 Digit strives to educate you on how technology can enhance and enrich your life by providing you information, opinion and advice on what to buy and how to get the most out of it. 
 With our ever growing community, Digit is a sum of all its members and followers who are an integral part of Digit. Digit is not a brand, it’s a community that feeds your passion 
-for technology.<br>
+for technology.
+<br><br><br><br>
 
 
-<nav class="navbar  navbar-expand-sm bg-light">
-<nav class="navbar  navbar-expand-lg navbar-warning bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-sm fixed-bottom bg-light">
+<nav class="navbar navbar-expand-lg fixed-bottom navbar-warning bg-light">
+  <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
@@ -191,10 +189,9 @@ for technology.<br>
 
     </body>
   
-    <body id="bg" style="background-image: url('{% static "images/grey.jfif"%}'); background-size: cover; background-size:100%;"> </body>
 <style type="text/css">
    body {
-      
+          background-image: url('{% static "images/grey.jfif"%}');background-repeat: no-repeat;background-attachment: fixed;background-size: cover;>
        } 
    #carousel{
      padding :00px;
@@ -227,6 +224,36 @@ for technology.<br>
     border-radius:0px;
 
    } 
+   .d-block
+   {
+    width:100%;
+    height:400%;
+   }
+   .font
+  {
+    font-size:200%;
+  }
+  @media (max-width: 767.98px)
+   {
+    .font
+    {
+     font-size:50%;
+    }
+   }
+   @media (max-width: 991.98px)
+   {
+    .font
+    {
+     font-size:100%;
+    }
+   }
+   @media (max-width: 1199.98px)
+   {
+    .font
+    {
+     font-size:150%;
+    }
+   }
 </style>
    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -15,19 +15,15 @@
   <body>
   <link rel='stylesheet'  href="{% static 'CSS\master.css' %}">
   <!--NAV BAR--       <nav class="navbar navbar-dark bg-dark">     -->
- <nav class="navbar fixed-top navbar-expand-sm bg-light">
-<nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
-<!--
-<div class="card" style="width: 200px;">
-      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
-  </div>
--->
+ <nav class="navbar fixed-top navbar-dark bg-light">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
 <div style="width: 200px;">
-      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
-  </div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <img style="width:200px ;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
+      <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
+       
     <span class="navbar-toggler-icon"></span>
   </button>
+  </div>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
@@ -87,11 +83,12 @@
   </div>
 </nav>
 </nav>
-<br><br><br>
+<br><br><br><br>
  <!--<div class="container" style="padding-top: 3%;">   -->
     <form action="/pybot/" method="GET">
-      <div class="form-group w-25">
-        <label for="exampleInputEmail1" style="font-size: 2.5ch;text-align:center; padding-bottom: 1%;color:#FFFFFF;"><b>What's Your Query</b></label>
+      <div class="form-group">
+        <!--<label for="exampleInputEmail1" style="font-size: 2.5ch;text-align:center; padding-bottom: 1%;color:#FFFFFF;"><b>What's Your Query</b></label>-->
+        <a class="font"><b>What's Your Query</b></a>
         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your Query" name="query">
         </div>
       <button type="submit" class="btn btn-outline-danger" style="color:#FFFFFF; text-align:center;"><b>Search</b></button> 
@@ -111,9 +108,9 @@
 {% endif %}
 
 
-<nav class="navbar fixed-bottom navbar-expand-sm bg-light">
-<nav class="navbar fixed-bottom navbar-expand-lg navbar-warning bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-sm fixed-bottom bg-light">
+<nav class="navbar navbar-expand-lg fixed-bottom navbar-warning bg-light">
+  <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
@@ -188,14 +185,13 @@
   </div>
 </nav>
 </nav>
-<body id="bg" style="background-image: url('{% static "images/pybotback.jpg"%}'); background-size: cover; background-size:100%;"> 
    <!-- </div>  -->
   </body>  
 </html>
    
     <style type="text/css">
    body {
-      
+          background-image: url('{% static "images/pybotback.jpg"%}');background-repeat: no-repeat;background-attachment: fixed;background-size: cover;>
        } 
    #carousel{
      padding :00px;
@@ -228,6 +224,47 @@
     border-radius:0px;
 
    } 
+   .font
+  {
+    font-size:150%;
+    color:#FFFFFF;
+    text-align:center;
+    padding-bottom: 1%;
+    color:#FFFFFF;
+  }
+  @media (max-width: 767.98px)
+   {
+    .font
+    {
+     font-size:50%;
+     color:#FFFFFF;
+    text-align:center;
+    padding-bottom: 1%;
+    color:#FFFFFF;
+    }
+   }
+   @media (max-width: 991.98px)
+   {
+    .font
+    {
+     font-size:40%;
+     color:#FFFFFF;
+     text-align:center;
+    padding-bottom: 1%;
+    color:#FFFFFF;
+    }
+   }
+   @media (max-width: 1199.98px)
+   {
+    .font
+    {
+     font-size:150%;
+     color:#FFFFFF;
+     text-align:center;
+    padding-bottom: 1%;
+    color:#FFFFFF;
+    }
+   }
 </style>
    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS   body { background: #11EBF3 !important; }-->

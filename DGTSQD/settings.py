@@ -13,9 +13,6 @@ import os
 from pathlib import Path
 from django.conf.urls.static import static
 from django.conf import settings
-import django_heroku
-import dj_database_url
-from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,7 +27,7 @@ SECRET_KEY = 'qw4&)y+1=d8&o))=@*@zk2n(e=u(b=p3&o)16^cbq!kyj4dr_+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','digitsquad','*','digitsquad.azurewebsites.net']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -43,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
-    'storages',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +50,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-#    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'DGTSQD.urls'
@@ -87,16 +82,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-#DATABASES = {
-#    'default': {
-#        'ENGINE':'django.db.backends.postgresql_psycopg2',
-#        'NAME': 'DGTSQD',
-#        'USER': 'postgres',
-#        'PASSWORD': 'deathjustice',
-#        'HOST': 'localhost',
-#        'PORT': '5432',
-#    }
-#}
 
 
 # Password validation
@@ -151,34 +136,3 @@ LOGOUT_REDIRECT_URL = "/basic"
 
 AUTH_PROFILE_MODULE = 'main.UserProfile'
 
-
-STATIC_LOCATION = "static"
-MEDIA_LOCATION = "media"
-
-STATICFILES_DIRS =  BASE_DIR / "static",
-MEDIAFILES_DIRS =  BASE_DIR / "media",
-
-
-AZURE_ACCOUNT_NAME = 'dgtsqdsite'
-AZURE_ACCOUNT_KEY = 'IveFc2edxtaj4NUNiJbtbGPHoHMmITB9osje13Phb6ykqUOvunW+Om+it4tfwn0APfQvLIm8mljgwhmIRCap8w=='
-AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
-AZURE_LOCATION = 'static'
-AZURE_CONTAINER = 'static'
-#AZURE_LOCATION = 'media'
-#AZURE_CONTAINER = 'media'
-
-
-STATIC_LOCATION = 'static'
-STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
-MEDIA_LOCATION = 'media'
-MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
-
-
-STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStorage'
-DEFAULT_FILE_STORAGE = 'DGTSQD.custom_azure.AzureMediaStorage'
-
-
-
-#STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-#django_heroku.settings(locals())

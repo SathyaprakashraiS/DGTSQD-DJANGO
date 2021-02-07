@@ -14,19 +14,15 @@
 <body>
 	<link rel='stylesheet'  href="{% static 'CSS\master.css' %}">
   <!--NAV BAR--       <nav class="navbar navbar-dark bg-dark">     -->
-<nav class="navbar fixed-top navbar-expand-sm bg-light">
-<nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
-<!--
-<div class="card" style="width: 200px;">
-      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
-  </div>
--->
+<nav class="navbar fixed-top navbar-dark bg-light">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
 <div style="width: 200px;">
-      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
-  </div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <img style="width:200px ;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
+      <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
+       
     <span class="navbar-toggler-icon"></span>
   </button>
+  </div>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
@@ -91,31 +87,31 @@
 <br><br><br><br>
 <h1 style="text-align:center;color:#FFFFFF"><b>PANEL MEMBERS</b></h1>
 <form action="profile/<tager>">{% csrf_token %}
-<div class="grid-container">
-  <div class="grid-item">
-    <img id="img" class="card-img-top" src="{{obj1.img.url}}" alt="Card image">
+<!--<div class="grid-container">-->
+  <div class="card">
+    <img id="img" class="im" src="{{obj1.img.url}}" alt="Card image">
     <button type="submit" name="test" value="1" class="btnm">{{obj1.user}}</button>
   </div>
-  <div  class="grid-item">
-    <img id="img" class="card-img-top" src="{{obj2.img.url}}" alt="Card image">
+  <div  class="card">
+    <img id="img" class="im" src="{{obj2.img.url}}" alt="Card image">
     <button type="submit" name="test" value="2" class="btnm">{{obj2.user}}</button>
   </div>
-  <div  class="grid-item">
-    <img id="img" class="card-img-top" src="{{obj3.img.url}}" alt="Card image">
+  <div  class="card">
+    <img id="img" class="im" src="{{obj3.img.url}}" alt="Card image">
     <button type="submit" name="test" value="3" class="btnm">{{obj3.user}}</button>
   </div>
-  <div  class="grid-item">
-    <img id="img" class="card-img-top" src="{{obj4.img.url}}" alt="Card image">
+  <div  class="card">
+    <img id="img" class="im" src="{{obj4.img.url}}" alt="Card image">
     <button type="submit" name="test" value="4" class="btnm">{{obj4.user}}</button>
   </div>
-</div>
+<!--</div>-->
 </form>
 
 
 
 <nav class="navbar fixed-bottom navbar-expand-sm bg-light">
 <nav class="navbar fixed-bottom navbar-expand-lg navbar-warning bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
@@ -190,15 +186,81 @@
   </div>
 </nav>
 </nav>
-    </body>
-<body id="bg" style="background-image: url('{% static "images/bbg1.png"%}'); background-size: cover; background-size:100%;"></body>  
-   
-<!--
-   <style type="text/css">
+   </body>
+<style type="text/css">
    body 
    { 
+    
+    background-image: url('{% static "images/e1.jpg"%}');background-repeat: no-repeat;background-attachment: fixed;background-size: cover;background-size:100%>
    }
-   .grid-container{
+/*
+@media (max-width: 767.98px)
+ {
+  .grid-container{
+    display:grid;
+    grid-gap:10px 10px;
+    grid-row-gap:10px;
+    grid-column-gap:20px;
+    grid-template-columns: auto auto auto;
+   } 
+   .grid-item{
+     width:35%;
+     height:38%;
+     background-color:black;
+    grid-gap:0px 20px;
+    border-radius:10%;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    margin-left:20px;
+    margin-right:20px;
+    margin-top:0rem;
+    margin-bottom:5rem;
+    }   
+    #img{
+     width:100%;
+     height:100%;
+     justify-content:center;
+  }
+ }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px)
+ { 
+  .grid-container{
+    display:grid;
+    grid-gap:10px 10px;
+    grid-row-gap:10px;
+    grid-column-gap:20px;
+    grid-template-columns: auto auto auto;
+   } 
+   .grid-item{
+     width:35%;
+     height:38%;
+     background-color:black;
+    grid-gap:0px 20px;
+    border-radius:10%;
+    padding-top: 20%;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    margin-left:20px;
+    margin-right:20px;
+    margin-top:0rem;
+    margin-bottom:5rem;
+    }   
+    #img{
+     width:100%;
+     height:100%;
+     justify-content:center;
+  }
+ }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px)
+ { 
+  .grid-container{
     display:grid;
     grid-gap:10px 10px;
     grid-row-gap:10px;
@@ -217,33 +279,17 @@
     padding-left: 20px;
     margin-left:20px;
     margin-right:20px;
-    margin-top:10rem;
-    margin-bottom:20rem;
-    }
-       .hello:hover{
-    color:red;
-}
+    margin-top:0rem;
+    margin-bottom:5rem;
+    }   
     #img{
-     width:300px;
-     height:300px;
+     width:100%;
+     height:100%;
      justify-content:center;
   }
-  .btnm{
-    background-color:#FF0000;
-    justify-content:center;
-    width:300px;
-  }
-.btnm:hover {
-  background-color:#FFFFFF;
 }
 
-</style>
--->
 
-<style type="text/css">
-   body 
-   { 
-   }
    .grid-container{
     display:grid;
     grid-gap:10px 10px;
@@ -269,7 +315,7 @@
     #img{
      width:300px;
      height:300px;
-     
+     justify-content:center;
   }
   .btnm{
     background-color:#FF0000;
@@ -280,6 +326,116 @@
 .btnm:hover {
   background-color:#FFFFFF;
 }
+*/
+.card{
+    padding-top: 1%;
+    grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+    padding-right: 1%;
+    padding-bottom: 2%;
+    padding-left: 1%;
+    margin-left:0%;
+    margin-right:0%;
+    margin-top:0%;
+    margin-bottom:5%;
+    background-color:#7F7F89;
+    border-radius:4%;
+   } 
+   .im{
+     size:50%;
+     height:350px;
+     transition: transform .2s;
+   }
+   .im:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 767.98px)
+{
+  .card{
+    width:100%;
+    grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+    padding-top: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    margin-left:5%;
+    margin-right:0%;
+    margin-top:0%;
+    margin-bottom:30%;
+    background-color:#7F7F89;
+    border-radius:4%;
+   } 
+   .im{
+     size:50%;
+     height:50%;
+     transition: transform .2s;
+   }
+   .im:hover {
+  transform: scale(1.1);
+}
+}
+@media (max-width: 991.98px)
+{
+  .card{
+    width:90%;
+    grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+    padding-top: 3%;
+    padding-right: 1%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    margin-left:5%;
+    margin-right:0%;
+    margin-top:2%;
+    margin-bottom:30%;
+    background-color:#7F7F89;
+    border-radius:4%;
+   } 
+   .im{
+     size:50%;
+     height:50%;
+     transition: transform .2s;
+   }
+   .im:hover {
+  transform: scale(1.1);
+}
+}
+@media (max-width: 1199.98px)
+{
+  .card{
+    width:90%;
+    grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+    padding-top: 3%;
+    padding-right: 1%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    margin-left:5%;
+    margin-right:5%;
+    margin-top:2%;
+    margin-bottom:30%;
+    background-color:#7F7F89;
+    border-radius:4%;
+   } 
+   .im{
+     size:50%;
+     height:50%;
+     transition: transform .2s;
+   }
+   .im:hover {
+  transform: scale(1.1);
+}
+}
+.btnm{
+
+    background-color:#FF0000;
+    justify-content:center;
+    width:100%;
+    height:35px;
+  }
+.btnm:hover {
+  background-color:#FFFFFF;
 </style>
 
    <!-- Optional JavaScript -->

@@ -1,0 +1,316 @@
+<!doctype html>
+{%load static %}
+{% static 'images' as base %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--google icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>EVENTS</title>
+  </head>
+  <body>
+   <link rel='stylesheet'  href="{% static 'CSS\master.css' %}">
+<nav class="navbar fixed-top navbar-dark bg-light">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
+<div>
+      <img style="width:200px ;" src="{% static 'images/logo.png' %}"  alt="not found">
+      <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
+
+  </button>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" style="color: #000000" href="/basic"><div class="hello"><span class="material-icons">home</span>HOME</div><!--<span class="sr-only">(current)</span>--></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="color: #000000" href="/newspost"><div class="hello"><span class="material-icons">article</span>TECH BYTES</div></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="color: #000000" href="/achievements"><div class="hello"><span class="material-icons">emoji_events</span>ACHIEVEMENTS</div></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="color: #000000" href="/project"><div class="hello"><span class="material-icons">star</span>PROJECTS</div></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="color: #ff4500" href="/events"><div class="hello"><span class="material-icons">school</span>EVENTS</div></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color: #000000" href="/tmembers"><div class="hello"><span class="material-icons">engineering</span>TOP SQUAD MEMBERS</div></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color: #000000" href="/news"><div class="hello"><span class="material-icons">text_snippet</span>NEWS</div></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color: #000000" href="/comment"><div class="hello"><span class="material-icons">message</span>REVIEW</div></a>
+      </li>
+      {% if user.is_authenticated %}
+      <div style="border-radius:50%" class="btn-group">
+     <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      {{request.user.username}}
+     </button>
+      <div class="dropdown-menu">
+               <a class="dropdown-item" href="/viewprofile">EDIT PROFILE</a>
+              <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="/dispprofile">VIEW PROFILE</a>
+              </div>
+                
+        <li class="nav-item">
+        <a class="nav-link" style="color: #000000" href="/logout"><div class="hello"><span class="material-icons">lock_open</span>LOGOUT</div></a>
+      </li>
+      {% else %}
+     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" style="color: #000000" href="/login"><div class="hello"><span class="material-icons">login</span>SIGNUP</div></a>
+      </li>
+      {% endif %}
+    
+  
+
+</div>
+    </ul>
+    <span class="navbar-text">
+     <!--text here-->
+    </span>
+  </div>
+</nav>
+</nav>
+
+<br><br><br>
+<div>
+<h1 style="text-align:center;color:#000000;font-size:200%"><b>LATEST EVENTS</b></h1></div>
+  
+{% for d in obj %}
+    {% if forloop.last %}
+  <div class="card">
+     <img id="img" src="{{d.img.url}}" class="image" alt="not found">
+     <div class="card-body">
+     <p style="color:#000000;overflow-wrap: break-word;"><b>EVENT NAME:{{d.name}}</b></p>
+     <p  style="color:#000000;overflow-wrap: break-word;"><b>ABOUT:{{d.info}}</b></p>
+     <p id="demo"></p>
+</div>
+
+    
+    {% endif %}
+{% endfor %}
+ </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br<br><br><br><br><br>
+
+<div>
+<h1 id="txt"style="text-align:center;color:#000000;font-size:200%"><b>LAST EVENTS</b></h1></div>
+<div>
+{% for i in obj reversed %}
+  {% if forloop.first %}
+
+  {% else %}
+      <div class="grid-container">
+      <div class="grid-item">
+      <img src="{{i.img.url}}" class="im" alt="not found">
+      <h5 class=" title" style="color: #FFFFFF;text-align:center;font-size:100%">{{i.name}}</h5>
+      </div>
+      </div>
+  {% endif %}
+{% endfor %}
+<!--<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>-->
+</div>
+
+<div>
+<nav class="navbar fixed-bottom navbar-expand-sm bg-light">
+<nav class="navbar fixed-bottom navbar-expand-lg navbar-warning bg-light">
+  <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
+  </button>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" style="color: #000000" href="/basic"><div class="hello"><span class="material-icons">home</span>HOME</div></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="color: #000000" href="/members"><div class="hello"><span class="material-icons">emoji_people</span>MEMBERS</div></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="color: #000000" href="/pybot"><div class="hello"><span class="material-icons">location_searching</span>SQUAD SEARCH</div></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="color: #000000" href="/aboutus"><div class="hello"><span class="material-icons">mail</span>ABOUT US</div></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="color: #000000" href="/contactus"><div class="hello"><span class="material-icons">phonelink_ring</span>CONTACT US</div></a>
+      </li>
+  
+    </ul>
+    <span class="navbar-text">
+     <!--text here-->
+    </span>
+  </div>
+</nav>
+</nav>
+</div>
+ <style type="text/css">
+   body 
+   {  
+      background-image: url('{% static "images/e3.jpg"%}');background-repeat: no-repeat;background-attachment: fixed;background-size: cover;background-size:100%>
+   }
+   .card{
+      width:800px;
+      background: linear-gradient(to top, #ff9900 35%, #FFFFFF 94%);
+      margin-left:20%;
+      
+      padding-bottom:30px;
+    
+
+   }
+   .image{
+     width:100px;
+     height:100px;
+   }
+   .grid-container{
+     width:400px;
+     height:400px;
+     background: linear-gradient(to right, #ff9900 35%, #FFFFFF 94%);
+    display: inline-grid;
+    grid-template-columns: auto auto ;
+    justify-content: space-evenly;
+    grid-row-gap: 80px;
+    grid-column-gap:50px;
+    padding-left:60px;
+    margin-left:20px;
+    
+ 
+} 
+#txt{
+  margin-right:180px;
+  padding-right:40px;
+  padding-left:120px;
+  margin-bottom:20px;
+  margin-top:20px;
+
+}
+   
+   .hello:hover{
+    color:red;
+}
+   .im{
+     width:400px;
+     height:400px;
+     transition: transform .2s;
+   }
+   .im:hover {
+  transform: scale(1.05);
+  border:10px solid black;
+}
+   .car{
+    float: left;
+    width: 33.33%;
+    padding: 1px;
+    background-color:#FF0000;
+   } 
+   .bike {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  #img{
+    width:600px;
+    height:300px;
+    margin-left:10%;
+    text-align:center;
+  }
+  @media(max-width:767.98px){
+    .card{
+      width:18rem;
+      background:none;
+      margin-left:4%;
+      padding-bottom:30px;
+    
+
+   }
+   #img{
+    width:80%;
+    height:80%;
+    margin-bottom:30px;
+    text-align:center;
+  }
+   .grid-container{
+     width:250px;
+     height:250px;
+     background: linear-gradient(to right, #ff9900 35%, #FFFFFF 94%);
+    display: inline-grid;
+    grid-template-columns: auto;
+    justify-content: space-evenly;
+    grid-row-gap: 80px;
+    grid-column-gap:50px;
+    padding-left:60px;
+    margin-left:20px;
+    margin-bottom:20px;
+    
+ 
+} 
+.im{
+     width:200px;
+     height:200px;
+     padding-right:20px;
+     margin-right:35px;
+     margin-bottom:10px;
+     margin-top:10px;
+     transition: transform .2s;
+   }
+
+}
+
+</style>
+</body>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+  
+</html>
+
+<!--
+   <body id="bg" style="background-image: url('{% static "images/news1.jpg"%}');background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-size:100%;">
+  </body>
+  -->

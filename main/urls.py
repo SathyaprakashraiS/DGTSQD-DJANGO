@@ -38,4 +38,5 @@ path('dispprofile/',views.DispProfile,name="dispprofile"),
 path('reportnews/',views.reportupload,name="reportnews"),
 path('viewinfo/<tager>/',views.viewinfo,name="viewinfo"),
 path('newspost/viewinfo/<tager>/',views.viewinfo,name="viewinfo"),
+path("testingresize/",views.testingresize,name="testingresize"),
 ]

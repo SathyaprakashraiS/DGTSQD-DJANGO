@@ -17,19 +17,14 @@
   </head>
   <body>
    <link rel='stylesheet'  href="{% static 'CSS\master.css' %}">
-<nav class="navbar fixed-top navbar-expand-sm bg-light">
-<nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
-<!--
-<div class="card" style="width: 200px;">
-      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
-  </div>
--->
-<div style="width: 200px;">
-      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
-  </div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+<nav class="navbar fixed-top navbar-dark bg-light">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
+<div>
+      <img style="width:200px ;" src="{% static 'images/logo.png' %}"  alt="not found">
+      <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
+
   </button>
+  </div>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
@@ -91,41 +86,45 @@
 </nav>
 
 <br><br><br>
-<h1 style="text-align:center;color:#000000"><b>LATEST EVENTS</b></h1>
-
+<div>
+<h1 style="text-align:center;color:#000000;font-size:200%"><a class="headerfont"><b>LATEST EVENTS</b></a></h1></div>
+  <div class="card" >
 {% for d in obj %}
     {% if forloop.last %}
-        <div class="card" >
-        <img src="{{d.img.url}}" class="im" alt="not found">
-        <h5 style="color: #FFFFFF;text-align: center">{{d.name}}</h5>
-     </div>
-      <div >
-      <div id="info">
-       <p style="color:#000000;overflow-wrap: break-word;"><b>EVENT NAME:</b>{{d.name}}</p>
-       <p  style="color:#000000;overflow-wrap: break-word;font-size: 15px"><b>ABOUT:</b>{{d.info}}</p>
-       </div>
-      </div>
+      
+        <img id="img" src="{{d.img.url}}" class="im" alt="not found">
+        <a class="fonts"><p style="color:#000000;overflow-wrap: break-word;"><b>EVENT NAME:{{d.name}}</b></p></a>
+        <a class="fonts"><p  style="color:#000000;overflow-wrap: break-word;"><b>ABOUT:{{d.info}}</b></p></a>
+        <a class="fonts"><p id="demo"></p></a>
+    
     {% endif %}
 {% endfor %}
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<h1 style="text-align:center;color:#000000"><b>LAST EVENTS</b></h1>
+ </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div>
+<h1 id="txt"style="text-align:center;color:#000000;font-size:200%"><a class="headerfont"><b>LAST EVENTS</b></h1></a></div>
+<div>
 {% for i in obj reversed %}
   {% if forloop.first %}
 
   {% else %}
-      <div class="card" style="width: 27.5rem;">
+      <div class="grid-container">
+      <div class="grid-item">
       <img src="{{i.img.url}}" class="im" alt="not found">
-      <h5 class=" title" style="color: #FFFFFF">{{i.name}}</h5>
+      <h5 class=" title" style="color: #FFFFFF;text-align:center;font-size:100%">{{i.name}}</h5>
+      </div>
       </div>
   {% endif %}
 {% endfor %}
 <!--<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>-->
-
+</div>
+<br><br><br><br><br><br>
 <div>
 <nav class="navbar fixed-bottom navbar-expand-sm bg-light">
 <nav class="navbar fixed-bottom navbar-expand-lg navbar-warning bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
+  </button>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
@@ -144,54 +143,7 @@
       <li class="nav-item ">
         <a class="nav-link" style="color: #000000" href="/contactus"><div class="hello"><span class="material-icons">phonelink_ring</span>CONTACT US</div></a>
       </li>
-      <!--{% if request.user.is_superuser %}
-          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-         <li class="nav-item">
-          <a class="nav-link" href="/upload"><span class="material-icons">question_answer</span>BYTES UPLOAD</a>
-          </li>
-          <li class="nav-item">
-          <a class="nav-link" href="/uploadevents"><span class="material-icons">question_answer</span>EVENTS UPLOAD</a>
-          </li>
-          <li class="nav-item">
-          <a class="nav-link" href="/uploadproject"><span class="material-icons">question_answer</span>PROJECT UPLOAD</a>
-          </li>
-          <li class="nav-item">
-          <a class="nav-link" href="/addachievements"><span class="material-icons">question_answer</span>ACHIEVEMENTS UPLOAD</a>
-          </li>
-          <li class="nav-item">
-          <a class="nav-link" href="/reportnews"><span class="material-icons">question_answer</span>ADD NEWS</a>
-          </li>-->
-           <!--
-       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  ADMIN UPLOADS
-</button>
-
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">UPLOADS</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-         <a class="nav-link" href="/upload"><span class="material-icons">question_answer</span>BYTES UPLOAD</a>
-         <a class="nav-link" href="/uploadevents"><span class="material-icons">question_answer</span>EVENTS UPLOAD</a>
-         <a class="nav-link" href="/uploadproject"><span class="material-icons">question_answer</span>PROJECT UPLOAD</a>
-         <a class="nav-link" href="/reportnews"><span class="material-icons">question_answer</span>ADD NEWS</a>
-         <a class="nav-link" href="/addachievements"><span class="material-icons">question_answer</span>ACHIEVEMENTS UPLOAD</a
-      ></div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-      {% else %}
-      {% endif %}-->
+  
     </ul>
     <span class="navbar-text">
      <!--text here-->
@@ -203,42 +155,68 @@
  <style type="text/css">
    body 
    {  
+      background-image: url('{% static "images/e3.jpg"%}');background-repeat: no-repeat;background-attachment: fixed;background-size: cover;background-size:100%>
    }
    .card{
-     width:400px;
-    padding-top: 30px;
-    padding-right: 40px;
-    padding-bottom: 10px;
-    padding-left: 30px;
-    margin-left:35px;
-    margin-right:20px;
-    margin-up:40px;
-    margin-down:20px;
-    background-color:#000000;
-    border-radius:50px;
-
-   } 
-   #info{
-     width:800px;
-     height:200px;
-     color:black;
-    margin-left:35rem;
-    margin-top:6rem;
-    margin-right:0 rem;
+      width:800px;
+      height:400px;
+      background: none;/*linear-gradient(to right, #ff9900 35%, #FFFFFF 94%);*/
+      margin-left:25%;
+      padding-bottom:30px;
     
-    font-size:30px;
 
-   } 
+   }
+   .fonts
+   {
+    font-size:110%;
+    padding-left:center;
+    padding-right:center;
+    margin-left:10%;
+    margin-right:center;
+    color:#000000;
+   }
+   .headerfont
+   {
+    font-size:120%;
+    color:#000000;
+   }
+   .grid-container{
+     width:400px;
+     height:400px;
+     background:none;/* linear-gradient(to right, #ff9900 35%, #FFFFFF 94%);*/
+    display: inline-grid;
+    grid-template-columns: auto auto ;
+    justify-content: space-evenly;
+    grid-row-gap: 80px;
+    grid-column-gap:50px;
+    padding-left:60px;
+    margin-left:45px;
+    margin-right:45px;
+    
+ 
+} 
+
+#txt{
+  margin-right:180px;
+  padding-right:40px;
+  padding-left:120px;
+  margin-bottom:20px;
+  margin-top:20px;
+
+}
+   
    .hello:hover{
     color:red;
 }
    .im{
-     size:30px;
+     width:400px;
      height:400px;
+
      transition: transform .2s;
    }
    .im:hover {
   transform: scale(1.05);
+  border:none;
 }
    .car{
     float: left;
@@ -251,17 +229,229 @@
     width: 33.33%;
     padding: 5px;
   }
-  .title{
-    margin-left:10rem;
+  
+  #img{
+    width:600px;
+    height:300px;
+    margin-left:10%;
+    text-align:center;
   }
+  
+  @media (max-width: 767.98px)
+  {
+    .card{
+      /*width:280px;
+      height:280px;
+      background:none/* linear-gradient(to right, #ff9900 35%, #FFFFFF 94%);
+      margin-left:0%;
+      padding-bottom:30px;*/
+      width:18rem;
+      background:none;
+      margin-left:15%;
+      padding-bottom:30px;
+   }
+   .fonts
+   {
+    font-size:110%;
+    padding-left:center;
+    padding-right:center;
+    margin-left:10%;
+    margin-right:center;
+    color:#000000;
+   }
+   .headerfont
+   {
+    font-size:120%;
+    color:#000000;
+   }
+   #img{
+    width:80%;
+    height:80%;
+    margin-bottom:30px;
+    text-align:center;
+  }
+   .grid-container{
+     width:250px;
+     height:250px;
+     background: none;/*linear-gradient(to right, #ff9900 35%, #FFFFFF 94%);*/
+    display: inline-grid;
+    grid-template-columns: auto;
+    justify-content: space-evenly;
+    grid-row-gap: 80px;
+    grid-column-gap:50px;
+    padding-left:60px;
+    margin-left:20px;
+    margin-bottom:20px;
+    
+ 
+} 
+.im{
+     width:200px;
+     height:200px;
+     padding-right:20px;
+     margin-right:35px;
+     margin-bottom:10px;
+     margin-top:10px;
+     margin-left: 16%;
+     transition: transform .2s;
+   }
 
+}
+   @media (max-width: 991.98px)
+   {
+    .card{
+      /*width:280px;
+      height:280px;
+      background:none/* linear-gradient(to right, #ff9900 35%, #FFFFFF 94%);
+      margin-left:0%;
+      padding-bottom:30px;*/
+      width:18rem;
+      background:none;
+      margin-left:15%;
+      padding-bottom:30px;
+   }
+   .fonts
+   {
+    font-size:110%;
+    padding-left:center;
+    padding-right:center;
+    margin-left:10%;
+    margin-right:center;
+    color:#000000;
+   }
+   .headerfont
+   {
+    font-size:120%;
+    color:#000000;
+   }
+   #img{
+    width:80%;
+    height:80%;
+    margin-bottom:30px;
+    text-align:center;
+  }
+   .grid-container{
+     width:250px;
+     height:250px;
+     background: none;/*linear-gradient(to right, #ff9900 35%, #FFFFFF 94%);*/
+    display: inline-grid;
+    grid-template-columns: auto;
+    justify-content: space-evenly;
+    grid-row-gap: 80px;
+    grid-column-gap:50px;
+    padding-left:60px;
+    margin-left:20px;
+    margin-bottom:20px;
+    
+ 
+} 
+.im{
+     width:200px;
+     height:200px;
+     padding-right:20px;
+     margin-right:35px;
+     margin-bottom:10px;
+     margin-top:10px;
+     margin-left: 16%;
+     transition: transform .2s;
+   }
+
+}
+   @media (max-width: 1199.98px)
+   {
+    .card{
+      /*width:280px;
+      height:280px;
+      background:none/* linear-gradient(to right, #ff9900 35%, #FFFFFF 94%);
+      margin-left:0%;
+      padding-bottom:30px;*/
+      width:18rem;
+      background:none;
+      margin-left:15%;
+      padding-bottom:30px;
+   }
+   .fonts
+   {
+    font-size:110%;
+    padding-left:center;
+    padding-right:center;
+    margin-left:10%;
+    margin-right:center;
+    color:#000000;
+   }
+   .headerfont
+   {
+    font-size:120%;
+    color:#000000;
+   }
+   #img{
+    width:80%;
+    height:80%;
+    margin-bottom:30px;
+    text-align:center;
+  }
+   .grid-container{
+     width:250px;
+     height:250px;
+     background:none;/* linear-gradient(to right, #ff9900 35%, #FFFFFF 94%);*/
+    display: inline-grid;
+    grid-template-columns: auto;
+    justify-content: space-evenly;
+    grid-row-gap: 80px;
+    grid-column-gap:50px;
+    padding-left:60px;
+    margin-left:20px;
+    margin-bottom:20px;
+    
+ 
+} 
+.im{
+     width:200px;
+     height:200px;
+     padding-right:20px;
+     margin-right:35px;
+     margin-bottom:10px;
+     margin-top:10px;
+     margin-left: 16%;
+     transition: transform .2s;
+   }
+
+}
 </style>
 </body>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
 
-   <body id="bg" style="background-image: url('{% static "images/e3.jpg"%}');background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-size:100%;">
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   </body>
   
 </html>

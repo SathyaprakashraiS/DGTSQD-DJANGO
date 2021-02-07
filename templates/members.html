@@ -14,19 +14,15 @@
   <body>
   <link rel='stylesheet'  href="{% static 'CSS\master.css' %}">
   <!--NAV BAR--       <nav class="navbar navbar-dark bg-dark">     -->
- <nav class="navbar fixed-top navbar-expand-sm bg-light">
-<nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
-<!--
-<div class="card" style="width: 200px;">
-      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
-  </div>
--->
+ <nav class="navbar fixed-top navbar-dark bg-light">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
 <div style="width: 200px;">
-      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
-  </div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <img style="width:200px ;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
+      <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
+       
     <span class="navbar-toggler-icon"></span>
   </button>
+  </div>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
@@ -92,12 +88,11 @@
   <br><br><br>
   <h1 style="text-align:center;color:#FFFFFF"><b>SQUAD MATES</b></h1>
 {% for i in obj %}
-
   <div class="card">
   <img id="img" class="card-img-top" src="{{i.img.url}}" alt="Card image">
   <div class="card-body">
     <h4 value="{{i.user.username}}"class="card-title" style="color: #FFFFFF">{{i.user.username}}</h4> 
-    <!-- <p  class="card-text" style=" width:200px; color:white; overflow-wrap: break-word;">{{i.about}}</p> -->
+    <!-- <p  class="card-text" style=" width:200px; color:white; overflow-wrap: break-word;">{{i.about}}</p>  -->
     
     <form action="profile/<tager>">{% csrf_token %}
   
@@ -106,30 +101,14 @@
   </div>
 </div>
 </div>
-
-<!--
-<div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-  <div class="card-header">NOTHING</div>
-  <div class="card-text">SOMETHING</div>
-  <img id="img" class="card-img-top" src="{{i.img.url}}" alt="Card image">
-  <div class="card-body">
-    <h4 value="{{i.user.username}}"class="card-title" style="color: #FFFFFF">{{i.user.username}}</h4> 
-    <form action="profile/<tager>">{% csrf_token %}
-</form>
-  </div>
-</div></div>
-</div>
-</div>
-</div>
--->
 {% endfor %}
 
 <br><br><br><br><br>
 
 
-<nav class="navbar fixed-bottom navbar-expand-sm bg-light">
-<nav class="navbar fixed-bottom navbar-expand-lg navbar-warning bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-sm fixed-bottom bg-light">
+<nav class="navbar navbar-expand-lg fixed-bottom navbar-warning bg-light">
+  <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
@@ -205,11 +184,10 @@
 </nav>
 </nav>
     </body>
-<body id="bg" style="background-image: url('{% static "images/asd.jpg"%}'); background-size: cover; background-size:100%;"></body> 
     
 <style type="text/css">
    body {
-      
+          background-image: url('{% static "images/asd.jpg"%}');background-repeat: no-repeat;background-attachment: fixed;background-size: cover;>
        } 
    #carousel{
      padding :00px;
@@ -239,21 +217,14 @@
     margin-left:35px;
     margin-right:20px;
     margin-top:10px;
-    margin-down:20px;
+    margin-bottom:20px;
     background-color:#000000;
     border-radius:50px;
     display:grid;
     grid-row-gap:10px;
     grid-column-gap:20px;
-   animation-name:rainbow;
-    animation-duration:0.5s;
-    animation-iteration-count: infinite;
-   }
-   .card:hover{
-    
-   }
    
-}
+   }
    .class-body{
      grid-gap: 20px 50px;
      display:grid;

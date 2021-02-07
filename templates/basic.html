@@ -14,23 +14,19 @@
   <body>
   <link rel='stylesheet'  href="{% static 'CSS\master.css' %}">
   <!--NAV BAR--       <nav class="navbar navbar-dark bg-dark">     -->
- <nav class="navbar fixed-top navbar-expand-sm bg-light">
-<nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
-<!--
-<div class="card" style="width: 200px;">
-      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
-  </div>
--->
+ <nav class="navbar fixed-top navbar-dark bg-light">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
 <div style="width: 200px;">
-      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
-  </div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <img style="width:200px ;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
+      <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
+       
     <span class="navbar-toggler-icon"></span>
   </button>
+  </div>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" style="color: #ff4500" href="/basic"><span class="material-icons">home</span>HOME<!--<span class="sr-only">(current)</span>--></a>
+        <a class="nav-link" style="color: #ff4500" href="/basic"><div class="hello"><span class="material-icons">home</span>HOME</div><!--<span class="sr-only">(current)</span>--></a>
       </li>
       <li class="nav-item ">
         <a class="nav-link" style="color: #000000" href="/newspost"><div class="hello"><span class="material-icons">article</span>TECH BYTES</div></a>
@@ -44,7 +40,7 @@
       <li class="nav-item ">
         <a class="nav-link" style="color: #000000" href="/events"><div class="hello"><span class="material-icons">school</span>EVENTS</div></a>
       </li>
-      <li class="nav-item">
+        <li class="nav-item">
         <a class="nav-link" style="color: #000000" href="/tmembers"><div class="hello"><span class="material-icons">engineering</span>TOP SQUAD MEMBERS</div></a>
       </li>
       <li class="nav-item">
@@ -70,15 +66,11 @@
       {% else %}
      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 
-      </li>
+    
        <li class="nav-item">
         <a class="nav-link" style="color: #000000" href="/login"><div class="hello"><span class="material-icons">login</span>SIGNUP</div></a>
       </li>
       {% endif %}
-    
-  
-
-</div>
     </ul>
     <span class="navbar-text">
      <!--text here-->
@@ -89,29 +81,28 @@
 <!--NAV BAR-->
   <!--<div class="container my-5 w-100">-->
   <!--  <img src="{% static 'images/z2.jpg' %}" class="d-block w-100" alt="OOPS IMAGE ERROR">-->
-
     <div id="carousel" class="carousel slide" data-ride="carousel">
     
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{% static 'images/z2.jpg' %}"  class="d-block w-100" alt="OOPS IMAGE ERROR">
+      <img src="{% static 'images/z2.jpg' %}" class="responsive" sizes="(max-width:320px)280px,(max-width:480px)440px,800px" alt="OOPS IMAGE ERROR" >
       <div class="centered mt-5" style="color:#FFFFFF;"> “The advance of technology is based on making it fit in so that you don't really even notice it, so it's part of everyday life.”<br>
 Bill Gates, Co-founder of Microsoft.<br><br><br>“It's not a faith in technology. It's faith in people.”<br>
 Steve Jobs, Co-founder of Apple.</div>
     </div>
     <div class="carousel-item">
-      <img src="{% static 'images/ps5.jpg' %}" class="d-block w-100" alt="OOPS IMAGE ERROR">
+      <img src="{% static 'images/ps5.jpg' %}" class="responsive" alt="OOPS IMAGE ERROR" width="1920" height="1080">
     </div>
     <div class="carousel-item">
-      <img src="{% static 'images/cpu.jpg' %}" class="d-block w-100" alt="OOPS IMAGE ERROR">
+      <img src="{% static 'images/cpu.jpg' %}" class="responsive" alt="OOPS IMAGE ERROR" width="1920" height="1080">
     </div>
-    <div class="carousel-item">
-      <img src="{% static 'images/kbm.jpg' %}" class="d-block w-100" alt="OOPS IMAGE ERROR">
-    </div>
+    <!--<div class="carousel-item">
+      <img src="{% static 'images/kbm.jpg' %}" class="responsive" alt="OOPS IMAGE ERROR" width="1920" height="1080">
+    </div>-->
   </div>
 </div>
 
-    <!--
+    <!--<img src="{% static 'images/z2.jpg' %}" class="responsive" alt="OOPS IMAGE ERROR" sizes="(max-width:320px)280px,(max-width:480px)440px,800px">
     {% if user.is_authenticated %}
       {% block content %}
         <h1>hello LOGINed USER</h1>
@@ -130,44 +121,42 @@ Steve Jobs, Co-founder of Apple.</div>
 
 <br>
 <h1 style="text-align: center;">WHY DIGIT SQUAD</h1><br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 <div class="grid-container">
 <div class="grid-item">
 <img src="https://img.icons8.com/fluent/96/000000/iphone.png" class="im">
-<br><p><b><a style="color:#FFFFFF;font-size: 15px;">KNOW MORE ABOUT</a></b></p><p><b><a style="color:#FFFFFF;font-size: 15px;">GADGETS AND TECHNOLOGIES</a></b></p>
+<br><p><b><a style="color:#FFFFFF;font-size: 13px;">KNOW MORE ABOUT</a></b></p><p><b><a style="color:#FFFFFF;font-size: 13px;">GADGETS AND TECHNOLOGIES</a></b></p>
 </div>
 <div class="grid-item">
 <img src="https://img.icons8.com/color/96/000000/goal--v1.png" class="im">
-<br><p><b><a style="color:#FFFFFF;font-size: 15px;">STAY ON MARK ALLTIME ABOUT</a></b></p><p><b><a style="color:#FFFFFF;font-size: 15px;">GADGETS AND TECHNOLOGY</a></b></p>
+<br><p><b><a style="color:#FFFFFF;font-size: 13px;">STAY ON MARK ALLTIME ABOUT</a></b></p><p><b><a style="color:#FFFFFF;font-size: 13px;">GADGETS AND TECHNOLOGY</a></b></p>
 </div> 
 <div class="grid-item">
 <img src="https://img.icons8.com/color/96/000000/coworking.png" class="im">
-<br><p><b><a style="color:#FFFFFF;font-size: 15px;">WE INTERACT</a></b></p><p><b><a style="color:#FFFFFF;font-size: 15px;">WE INNOVATE</a></b></p>
+<br><p><b><a style="color:#FFFFFF;font-size: 13px;">WE INTERACT</a></b></p><p><b><a style="color:#FFFFFF;font-size: 13px;">WE INNOVATE</a></b></p>
 </div>
 <div class="grid-item">
 <img src="https://img.icons8.com/color/96/000000/knowledge-transfer.png" class="im">
-<br><p><b><a style="color:#FFFFFF;font-size: 15px;">WE GAIN AND WE SHARE</a></b></p><p><b><a style="color:#FFFFFF;font-size: 15px;">OUR KNOWLEDGE</a></b></p>
+<br><p><b><a style="color:#FFFFFF;font-size: 13px;">WE GAIN AND WE SHARE</a></b></p><p><b><a style="color:#FFFFFF;font-size: 13px;">OUR KNOWLEDGE</a></b></p>
 </div>
 </div>
-<br><br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<br><br>
 
-<div class="grid-container">
+<div class="grid-containertwo">
 <div class="grid-item">
 <img src="https://img.icons8.com/color/96/000000/compare-heights.png" class="im">
-<br><p><b><a style="color:#FFFFFF;font-size: 15px;">STAND OUT GAINING</a></b></p><p><b><a style="color:#FFFFFF;font-size: 15px;">LASTEST TECH UPDATES</a></b></p>
+<br><p><b><a style="color:#FFFFFF;font-size: 13px;">STAND OUT GAINING</a></b></p><p><b><a style="color:#FFFFFF;font-size: 13px;">LASTEST TECH UPDATES</a></b></p>
 </div>
 <div class="grid-item">
 <img src="https://img.icons8.com/color/96/000000/light-on.png" class="im">
-<br><p><b><a style="color:#FFFFFF;font-size: 15px;">COMMUNITY FOR </a></b></p><p><b><a style="color:#FFFFFF;font-size: 15px;">INVENTORS AND INNOVATORS</a></b></p>
+<br><p><b><a style="color:#FFFFFF;font-size: 13px;">COMMUNITY FOR </a></b></p><p><b><a style="color:#FFFFFF;font-size: 13px;">INVENTORS AND INNOVATORS</a></b></p>
 </div>
 <div class="grid-item">
 <img src="https://img.icons8.com/color/96/000000/event-accepted.png" class="im">
-<br><p><b><a style="color:#FFFFFF;font-size: 15px;">LOADS OF EVENTS</a></b></p><p><b><a style="color:#FFFFFF;font-size: 14px;">FROM INDUSTRIAL EXPERTS</a></b></p>
+<br><p><b><a style="color:#FFFFFF;font-size: 13px;">LOADS OF EVENTS</a></b></p><p><b><a style="color:#FFFFFF;font-size: 13px;">FROM INDUSTRIAL EXPERTS</a></b></p>
 </div>
 <br><br>
 </div>
 <br><br><br>
-
       <!--<div class="alert alert-warning w-50 align-right" role="alert">
        <h1 style="text-align:center;">EAT HEALTHY STAY HEALTHY</h1>
 		  </div>-->
@@ -175,7 +164,7 @@ Steve Jobs, Co-founder of Apple.</div>
 
 <nav class="navbar navbar-expand-sm bg-light">
 <nav class="navbar navbar-expand-lg navbar-warning bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
@@ -250,20 +239,16 @@ Steve Jobs, Co-founder of Apple.</div>
   </div>
 </nav>
 </nav>
-
-<!--
-<div class="ani">
-  <img src="{% static 'images/testgif.gif' %}">
-</div>
--->
-<body id="bg" style="background-image: url('{% static "images/b1.jpg"%}'); background-size: cover; background-size:100%;"></body>
-    </body>
+<!--<body id="bg" style="background-image: url('{% static 'images/b1.jpg'%}'); background-size: 100%; background-size:100%;"></body>
+    </body>-->
 
     
 <style type="text/css">
    body {
-     
+          background-image: url('{% static 'images/b1.jpg'%}'); background-size:cover;
+
        } 
+    
    #carousel{
      padding :0px;
     
@@ -275,10 +260,7 @@ Steve Jobs, Co-founder of Apple.</div>
     padding-left: 200px;
 
    }
-   <style type="text/css">
-   body 
-   { background: yellow !important; 
-   }
+   
    .ca{
    padding-top: 10px;
     padding-right: 30px;
@@ -290,7 +272,13 @@ Steve Jobs, Co-founder of Apple.</div>
     margin-down:10px;
     background-color:#000000;
     border-radius:100px;
+
    } 
+
+   .responsive{
+    width: 100%;
+    height: auto;
+   }
    .caca{
    padding-top: 20px;
     padding-right: 60px;
@@ -302,6 +290,7 @@ Steve Jobs, Co-founder of Apple.</div>
     margin-down:20px;
     background-color:#000000;
     border-radius:100px;
+    
    } 
 .grid-container{
   display: inline-grid;
@@ -309,8 +298,83 @@ Steve Jobs, Co-founder of Apple.</div>
   justify-content: space-evenly;
   grid-row-gap: 40px;
   grid-column-gap:50px;
+  padding-left: 200px;
   
 }
+.grid-containertwo{
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+  grid-row-gap: 40px;
+  grid-column-gap:50px;
+  padding-left: 350px;
+  
+}
+
+
+@media (max-width: 767.98px) {
+  .grid-container{
+  display: inline-grid;
+  grid-template-columns: auto  ;
+  justify-content: space-evenly;
+  grid-row-gap: 20px;
+  grid-column-gap:50px;
+  padding-left: 50px;
+  
+}
+.grid-containertwo{
+  display: inline-grid;
+  grid-template-columns: auto ;
+  justify-content: space-evenly;
+  grid-row-gap: 40px;
+  grid-column-gap:50px;
+  padding-left: 50px;
+  
+}
+ }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { .grid-container{
+  display: inline-grid;
+  grid-template-columns: auto auto auto ;
+  justify-content: space-evenly;
+  grid-row-gap: 40px;
+  grid-column-gap:50px;
+  padding-left: 200px;
+  
+}
+.grid-containertwo{
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
+  grid-row-gap: 40px;
+  grid-column-gap:50px;
+  padding-left: 350px;
+  
+} }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { .grid-container{
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+  grid-row-gap: 40px;
+  grid-column-gap:50px;
+  padding-left: 200px;
+  
+}
+.grid-containertwo{
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+  grid-row-gap: 40px;
+  grid-column-gap:50px;
+  padding-left: 350px;
+  
+} }
+
+
+
 .grid-containe{
   display: inline-grid;
   grid-template-columns: auto auto auto;
@@ -346,6 +410,7 @@ Steve Jobs, Co-founder of Apple.</div>
 .grid-item:hover{
   border:10px solid red;
   transform: scale(1.1);
+  padding-left:70px;
 }
 #{
   background-color:#FFFFFF;
@@ -364,31 +429,6 @@ Steve Jobs, Co-founder of Apple.</div>
   margin-right:30rem;
   font-family:cursive;
 }
-
-.ani{
-  width: 0px;
-  height: 0px;
-  position: relative;
-  background-color: red;
-  animation-name: example;
-  animation-duration: 6s;
-  animation-iteration-count: infinite;
-  
-}
-@keyframes example {
-  0%   {background-color:red; left:0px; top:0px;}
-  10%  {background-color:yellow; left:200px; top:0px;}
-  20%  {background-color:blue; left:400px; top:0px;}
-  30%  {background-color:green; left:600px; top:0px;}
-  40% {background-color:red; left:800px; top:0px;}
-  50% {background-color:red; left:1000px; top:0px;}
-  60%   {background-color:red; left:800px; top:0px;}
-  70%  {background-color:yellow; left:600px; top:0px;}
-  80%  {background-color:blue; left:400px; top:0px;}
-  90%  {background-color:green; left:200px; top:0px;}
-  100% {background-color:red; left:0px; top:0px;transform:rotateY(180deg);}
-}
-
 </style>
 
    <!-- Optional JavaScript -->

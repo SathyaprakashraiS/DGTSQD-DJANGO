@@ -25,13 +25,10 @@ from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.urls import reverse_lazy
 from .models import report
 from .forms import Report
-from PIL import Image
-
+ 
 # Create your views here.
 def comment(request):
     obj = review.objects.all()
-    
-    
     return render(request,"review.html",{'obj':obj})
 
 
@@ -89,8 +86,7 @@ def tmembers(request,tager="1"):
        obj1=UserProfile.objects.get(idcard=1)
        obj2=UserProfile.objects.get(idcard=2)
        obj3=UserProfile.objects.get(idcard=3)
-       obj4=UserProfile.objects.get(idcard=4)
-       return render(request,"tmembers.html",{'obj1':obj1,'obj2':obj2,'obj3':obj3,'obj4':obj4})
+       return render(request,"tmembers.html",{'obj1':obj1,'obj2':obj2,'obj3':obj3})
       
 def aboutus(request):
     return render(request,"aboutus.html")
@@ -161,6 +157,7 @@ def eventspostupload(request):
 
 def eventpost(request):
     obj=event.objects.all()
+    
     return render(request,"events.html",{'obj':obj})
 
 def profile(request,tager="1"):
@@ -233,3 +230,5 @@ def viewinfo(request,tager="1"):
         }
         return render(request,"viewinfo.html",context)
 
+def testingresize(request):
+    return render(request,"testingresize.html",{})

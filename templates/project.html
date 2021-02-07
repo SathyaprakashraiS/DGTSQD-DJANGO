@@ -14,19 +14,14 @@
   <body>
   <link rel='stylesheet'  href="{% static 'CSS\master.css' %}">
   <!--NAV BAR--       <nav class="navbar navbar-dark bg-dark">     -->
-<nav class="navbar fixed-top navbar-expand-sm bg-light">
-<nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
-<!--
-<div class="card" style="width: 200px;">
-      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
-  </div>
--->
+<nav class="navbar fixed-top navbar-dark bg-light">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
 <div style="width: 200px;">
-      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
-  </div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <img style="width:200px ;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
+      <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
     <span class="navbar-toggler-icon"></span>
   </button>
+  </div>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
@@ -88,15 +83,15 @@
 </nav>
 
 <br><br><br><br><br>
-<h1 style="text-align:center;color:#000000"><b>SHOWCASING SQUAD CREATIONS</b></h1>
-<br><br><br>
+<h1 style="text-align:center;font-size:225%;color:#000000"><b>SHOWCASING SQUAD CREATIONS</b></h1>
+
 {% for i in obj reversed %}
-    <div class="card" style="width: 90rem;">
-      <h1 style="text-align:center;">{{i.title}}</h1>
+    <div class="card" style="width: 100%;">
+      <h1 style="text-align:center;font-size:200%">{{i.title}}</h1>
       <img src="{{i.img.url}}" class="im" alt="not found">
-      <h2 style="text-align:right;">{{i.author}}</h2>
-      <h3 style="text-align:right;">{{i.info}}</h3>
-      <h4 style="text-align:right;">{{i.link}}</h4><br>
+      <h2 style="text-align:right;font-size:100%">{{i.author}}</h2>
+      <h3 style="text-align:right;font-size:100%">{{i.info}}</h3>
+      <h4 style="text-align:right;font-size:100%">{{i.link}}</h4><br>
      </div>
  {% endfor %}
 
@@ -106,8 +101,8 @@
 
   <nav class="navbar fixed-bottom navbar-expand-sm bg-light">
 <nav class="navbar fixed-bottom navbar-expand-lg navbar-warning bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
+  </button>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
@@ -181,7 +176,7 @@
   </div>
 </nav>
 </nav>
-<body id="bg" style="background-image: url('{% static "images/p.jpg"%}'); background-size: cover; background-size:100%;"> 
+
    <!-- </div>  -->
   </body> 
     </body>
@@ -189,17 +184,17 @@
     
 <style type="text/css">
    body {
-      
+          background-image: url('{% static "images/p.jpg"%}');background-repeat: no-repeat;background-attachment: fixed;background-size: cover;background-size:100%>
        } 
    #carousel{
      padding :00px;
     
    }
    .container{
-     padding-top: 20px;
-    padding-right: 5px;
-    padding-bottom: 20px;
-    padding-left: 200px;
+     padding-top: 10%;
+    padding-right: 0%;
+    padding-bottom: 20%;
+    padding-left: 0%;
 
    }
    <style type="text/css">
@@ -210,20 +205,20 @@
     color:red;
 }
    .card{
-    padding-top: 10px;
-    padding-right: 30px;
-    padding-bottom: 0px;
-    padding-left: 30px;
-    margin-left:40px;
-    margin-right:0px;
-    margin-up:0px;
-    margin-down:0px;
+    padding-top: 1%;
+    padding-right: 2%;
+    padding-bottom: 0%;
+    padding-left: 2%;
+    margin-left:0%;
+    margin-right:0%;
+    margin-top:2%;
+    margin-bottom:2%;
     background-color:#489DFB;
-    border-radius:50px;
+    border-radius:10%;
    } 
    .im{
-     size:10px;
-     height:700px;
+     size:100%;
+     height:100%;
    }
 </style>
 

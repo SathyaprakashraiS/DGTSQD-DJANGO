@@ -14,19 +14,15 @@
   <body>
   <link rel='stylesheet'  href="{% static 'CSS\master.css' %}">
   <!--NAV BAR       <nav class="navbar navbar-dark bg-dark">     -->
- <nav class="navbar fixed-top navbar-expand-sm bg-light">
-<nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
-<!--
-<div class="card" style="width: 200px;">
-      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
-  </div>
--->
+ <nav class="navbar fixed-top navbar-dark bg-light">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
 <div style="width: 200px;">
-      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
-  </div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <img style="width:200px ;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
+      <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
+       
     <span class="navbar-toggler-icon"></span>
   </button>
+  </div>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
@@ -88,17 +84,17 @@
  <br>
   <br><br>
   {% if request.user.is_authenticated %}
-  <h1 style="text-align:center;"><a style="color: #11EBF3">We value your opinion,Tell us anything we can take care of!</a></h1>
+  <h1 style="text-align:center;"><a style="color: #11EBF3" class="font">We value your opinion,Tell us anything we can take care of!</a></h1>
 <form action="add_comment/">{% csrf_token %}
-<div class="input-group mb-3 w-25">
+<div class="input-group">
   <div class="input-group-prepend">
  
-    <span  class="input-group-text" id="inputGroup-sizing-default">NAME</span>
+    <span class="input-group-text" id="inputGroup-sizing-default">NAME</span>
   </div>
   <input type="text" name ="head" placeholder="enter your name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
 </div>
 
-<div class="input-group mb-3 w-50">
+<div class="input-group">
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-default">COMMENT</span>
   </div>
@@ -111,12 +107,12 @@
 
 </form>
  
- <h1 style="text-align:center;"><a style="color: #11EBF3">HEAR FROM OUR TOP USER'S</a></h1>
+ <h1 style="text-align:center;"><a style="color: #11EBF3;" class="font">HEAR FROM OUR TOP USER'S</a></h1>
 {% for i in obj reversed%}
 <ul class="list-group">
-  <li class="list-group-item w-25 mt-3" ><b>NAME  :</b>{{i.name}}</li>
-  <li  style="overflow-wrap: break-word;" class="list-group-item w-25"><b>COMMENT  :</b>{{i.comment}}</li>
-  
+  <li class="list-group-item"><b>NAME  :</b>{{i.name}}</li>
+  <li  style="overflow-wrap: break-word;"class="list-group-item"><b>COMMENT  :</b>{{i.comment}}</li>
+  <br>
  </ul>
 {% endfor %}
  </body>
@@ -127,7 +123,7 @@
 <br><br>
 <nav class="navbar fixed-bottom navbar-expand-sm bg-light">
 <nav class="navbar fixed-bottom navbar-expand-lg navbar-warning bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
@@ -207,7 +203,7 @@
     
 <style type="text/css">
    body {
-      
+          background-image: url('{% static "images/q1.jpg"%}');background-repeat: no-repeat;background-attachment: fixed;background-size: cover;background-size:100%>
        } 
    #carousel{
      padding :00px;
@@ -218,6 +214,7 @@
     padding-right: 5px;
     padding-bottom: 20px;
     padding-left: 200px;
+
 
    }
    <style type="text/css">
@@ -234,12 +231,37 @@
     padding-left: 0px;
     margin-left:0px;
     margin-right:0px;
-    margin-up:0px;
-    margin-down:0px;
+    margin-top:0px;
+    margin-bottom:0px;
     background-color:#FF0000;
     border-radius:0px;
 
    } 
+   .font
+   {
+    font-size:100%;
+   }
+   @media (max-width: 767.98px)
+   {
+    .font
+    {
+     font-size:50%;
+    }
+   }
+   @media (max-width: 991.98px)
+   {
+    .font
+    {
+     font-size:40%;
+    }
+   }
+   @media (max-width: 1199.98px)
+   {
+    .font
+    {
+     font-size:60%;
+    }
+   }
 </style>
 
    <!-- Optional JavaScript -->
@@ -248,9 +270,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   </body>
-  <body id="bg" style="background-image: url('{% static "images/q1.jpg"%}');background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-size:100%; ">
+  
   </body>
 </html>

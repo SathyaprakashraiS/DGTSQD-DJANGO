@@ -18,7 +18,7 @@
 </div>
 
 <div  id="box"class="input-group-append mb-4">
-    <span class="input-group-text" ></span>
+    
      <div id="name"><i id="icon1"class="fas fa-user"></i><span style=" color:black; font-family:cursive">USERNAME:</span>{{e_form.username}}</div>
 </div>
 <br><br>
@@ -48,17 +48,13 @@
 </div>
 </form>
 </div>
-</body>
-<body id="bg" style="background-image: url('{% static "images/qw4.jpg"%}'); background-size: cover; background-size:100%;"></body> 
-</html>
-<style>
+
+<style type="text/css">
 
 body{
-  
-
+  background-image: url('{% static "images/qw4.jpg"%}');background-repeat: no-repeat;background-attachment: fixed;background-size: cover;background-size:100%>
 }
 #fm{
-
     width: 500px;
     height:600px;
     margin-top:5rem;
@@ -73,8 +69,14 @@ body{
     padding:10px;
     border: 8px solid black;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    
 }
+#img-b{
+      width:120px;
+     height:120px;
+     border-radius:50%;
+     background-color: #FF0000;
+     margin-left:12rem;
+  }
 #log{
   text-align:center;
 }
@@ -84,7 +86,7 @@ body{
     margin-left:3rem;
 
     padding-top:10px;
-    padding-down:0px;
+    padding-bottom:0px;
     border-radius: 0.25rem 0 0 0.25rem !important;
 }
 #email{
@@ -125,21 +127,11 @@ body{
     margin-right:20px;
 
 }
-#img-b{
-      width:120px;
-     height:120px;
-     border-radius:50%;
-     background-color: #FF0000;
-     margin-left:12rem;
-  }
-#id_username{
+
+#id_username
+{
     width:250px;
     height:20px;
-    
-    
-   
-   
-
 }
 .fas {
     width:30px;
@@ -163,4 +155,88 @@ body{
 #name{
    margin-right:20px;
 }
+@media (max-width: 767.98px)
+{
+    #fm{
+    width: 500px;
+    height:100%;
+    margin-top:5rem;
+    margin-bottom: auto;
+    margin-left:30rem;
+    margin-right:20rem;
+    background: yellow;
+    position: relative;
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    padding:10px;
+    border: 8px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#img-b{
+      width:120px;
+     height:120px;
+     border-radius:50%;
+     background-color: #FF0000;
+     margin-left:12rem;
+  }
+}
+@media (max-width: 991.98px)
+{
+    #fm{
+    width: 500px;
+    height:300%;
+    margin-top:5rem;
+    margin-bottom: auto;
+    margin-left:30rem;
+    margin-right:20rem;
+    background: yellow;
+    position: relative;
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    padding:10px;
+    border: 8px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#img-b{
+      width:120px;
+     height:120px;
+     border-radius:50%;
+     background-color: #FF0000;
+     margin-left:12rem;
+  }
+}
+@media (max-width: 1199.98px)
+{
+   #fm{
+    width: 500px;
+    height:300%;
+    margin-top:5rem;
+    margin-bottom: auto;
+    margin-left:25%;
+    margin-right:20rem;
+    background: yellow;
+    position: relative;
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    padding:10px;
+    border: 8px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#img-b{
+     width:50%;
+     height:50%;
+     border-radius:50%;
+     background-color: #FF0000;
+     margin-left:40%;
+  } 
+}
 </style>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+  
+</html>

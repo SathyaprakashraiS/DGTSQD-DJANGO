@@ -2,8 +2,15 @@
 {% load static %}
 <html>
  <!--font awesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--google icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <body>
 <!--page-->
 <div>
@@ -16,15 +23,12 @@
 
   <br><br><br>
   <a href="/basic"><button type="button">BACK HOME</button></a>
-</body>
-<body id="bg" style="background-image: url('{% static "images/qw4.jpg"%}'); background-size: cover; background-size:100%;"></body> 
+</div>
+</div>
 
-</html>
-<style>
-
+<style type="text/css">
 body{
-  
-
+background-image: url('{% static "images/qw4.jpg"%}');background-repeat: no-repeat;background-attachment: fixed;background-size: cover;background-size:100%>
 }
 #fm{
 
@@ -44,9 +48,101 @@ body{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     
 }
+#img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    margin-left:30%;
+    border:10px solid red;
+    }
+    @media (max-width: 767.98px)
+    {
+      #fm{
+
+    width: 300px;
+    height:450px;
+    margin-top:8rem;
+    margin-bottom: auto;
+    margin-left:37rem;
+    margin-right:20rem;
+    background: yellow;
+    position: relative;
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    padding:10px;
+    border: 8px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+#img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    margin-left:25%;
+    border:10px solid red;
+    }
+    }
+    @media (max-width: 991.98px)
+    { 
+      #fm{
+
+    width: 300px;
+    height:450px;
+    margin-top:8rem;
+    margin-bottom: auto;
+    margin-left:37rem;
+    margin-right:20rem;
+    background: yellow;
+    position: relative;
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    padding:10px;
+    border: 8px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+#img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    margin-left:25%;
+    border:10px solid red;
+    }
+    }
+    @media (max-width: 1199.98px)
+    {
+      #fm{
+
+    width: 50%;
+    height:100%;
+    margin-top:8rem;
+    margin-bottom: auto;
+    margin-left:25%;
+    margin-right:20rem;
+    background: yellow;
+    position: relative;
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    padding:10px;
+    border: 8px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+#img
+      {
+      width:50%;
+      height:50%;
+      border-radius:50%;
+      margin-left:25%;
+      border:10px solid red;
+      }
+    }
 .card{
 
-     animation-name:rainbow;
+      animation-name:rainbow;
        animation-duration:4s;
        animation-iteration-count: infinite;
 
@@ -95,15 +191,10 @@ body{
     color: white !important;
     margin-top:10px;
 }
-#img{
-    width:100px;
-    height:100px;
-    border-radius:50%;
-    margin-left:6rem;
-    border:10px solid red;
 
 
-}
+
+
 #id_username{
     width:250px;
     height:20px;
@@ -131,4 +222,12 @@ body{
 #id_email{
     margin-right:3rem;
 }
+
 </style>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+  
+</html>

@@ -14,19 +14,14 @@
   <body>
   <link rel='stylesheet'  href="{% static 'CSS\master.css' %}">
   <!--NAV BAR--       <nav class="navbar navbar-dark bg-dark">     -->
- <nav class="navbar fixed-top navbar-expand-sm bg-light">
-<nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
-<!--
-<div class="card" style="width: 200px;">
-      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
-  </div>
--->
+ <nav class="navbar fixed-top navbar-dark bg-light">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
 <div style="width: 200px;">
-      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
-  </div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <img style="width:200px ;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
+      <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
     <span class="navbar-toggler-icon"></span>
   </button>
+  </div>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
@@ -128,9 +123,9 @@
 		  </div>-->
     <!--<h1 style="text-align:center;">EAT HEALTHY STAY HEALTHY</h1><br>-->
 <br><br><br><br>
-<h1 style="text-align:center;color:#FFFFFF"><b>OUR ACHIEVEMENTS</b></h1>
+<h1 style="text-align:center; font-size:225%;color:#FFFFFF"><b>OUR ACHIEVEMENTS</b></h1>
 {% for i in obj reversed %}
-  <div class="card" style="width: 27.5rem;">
+  <div class="card" >
   <img src="{{i.img.url}}" class="im" alt="not found">
   <h5 class=" title" style="color: #FFFFFF">{{i.info}}</h5>
   </div>
@@ -143,8 +138,7 @@
 
 <nav class="navbar fixed-bottom navbar-expand-sm bg-light">
 <nav class="navbar fixed-bottom navbar-expand-lg navbar-warning bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
@@ -220,12 +214,12 @@
 </nav>
     </body>
   
-    <body id="bg" style="background-image: url('{% static "images/as.jpg"%}'); background-size: cover; background-size:100%;"> 
+     
    <!-- </div>  -->
   </body>  
 <style type="text/css">
    body {
-      
+          background-image: url('{% static "images/as.jpg"%}');background-repeat: no-repeat;background-attachment: fixed;background-size: cover;background-size:100%>
        } 
    #carousel{
      padding :00px;
@@ -246,24 +240,96 @@
    { background: yellow !important; 
    }
    .card{
-    padding-top: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
-    padding-left: 30px;
-    margin-left:40px;
-    margin-right:0px;
-    margin-up:0px;
-    margin-down:0px;
+    padding-top: 1%;
+    padding-right: 1%;
+    padding-bottom: 2%;
+    padding-left: 1%;
+    margin-left:5%;
+    margin-right:0%;
+    margin-top:0%;
+    margin-bottom:0%;
     background-color:#7F7F89;
-    border-radius:30px;
+    border-radius:4%;
    } 
    .im{
-     size:30px;
-     height:400px;
+     size:50%;
+     height:50%;
      transition: transform .2s;
    }
    .im:hover {
   transform: scale(1.1);
+}
+@media (max-width: 767.98px)
+{
+  .card{
+    width:100%;
+    padding-top: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    margin-left:5%;
+    margin-right:0%;
+    margin-up:0%;
+    margin-down:0%;
+    background-color:#7F7F89;
+    border-radius:4%;
+   } 
+   .im{
+     size:50%;
+     height:50%;
+     transition: transform .2s;
+   }
+   .im:hover {
+  transform: scale(1.1);
+}
+}
+@media (max-width: 991.98px)
+{
+  .card{
+    width:90%;
+    padding-top: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    margin-left:5%;
+    margin-right:0%;
+    margin-top:2%;
+    margin-bottom:2%;
+    background-color:#7F7F89;
+    border-radius:4%;
+   } 
+   .im{
+     size:50%;
+     height:50%;
+     transition: transform .2s;
+   }
+   .im:hover {
+  transform: scale(1.1);
+}
+}
+@media (max-width: 1199.98px)
+{
+  .card{
+    width:90%;
+    padding-top: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    margin-left:5%;
+    margin-right:0%;
+    margin-top:2%;
+    margin-bottom:2%;
+    background-color:#7F7F89;
+    border-radius:4%;
+   } 
+   .im{
+     size:50%;
+     height:50%;
+     transition: transform .2s;
+   }
+   .im:hover {
+  transform: scale(1.1);
+}
 }
 </style>
 

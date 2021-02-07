@@ -14,7 +14,7 @@
   <body>
   <link rel='stylesheet'  href="{% static 'CSS\master.css' %}">
   <!--NAV BAR--       <nav class="navbar navbar-dark bg-dark">     -->
-<nav class="navbar fixed-top navbar-expand-sm bg-light">
+ <nav class="navbar fixed-top navbar-expand-sm bg-light">
 <nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
 <!--
 <div class="card" style="width: 200px;">
@@ -30,33 +30,33 @@
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" style="color: #000000" href="/basic"><div class="hello"><span class="material-icons">home</span>HOME</div><!--<span class="sr-only">(current)</span>--></a>
+        <a class="nav-link" style="color: #ff4500" href="/basic"><span class="material-icons">home</span>HOME<!--<span class="sr-only">(current)</span>--></a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" style="color: #000000" href="/newspost"><div class="hello"><span class="material-icons">article</span>TECH BYTES</div></a>
+        <a class="nav-link" href="/newspost"><span class="material-icons">article</span>TECH BYTES</a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" style="color: #000000" href="/achievements"><div class="hello"><span class="material-icons">emoji_events</span>ACHIEVEMENTS</div></a>
+        <a class="nav-link" href="/achievements"><span class="material-icons">emoji_events</span>ACHIEVEMENTS</a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" style="color: #000000" href="/project"><div class="hello"><span class="material-icons">star</span>PROJECTS</div></a>
+        <a class="nav-link" href="/project"><span class="material-icons">star</span>PROJECTS</a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" style="color: #000000" href="/events"><div class="hello"><span class="material-icons">school</span>EVENTS</div></a>
+        <a class="nav-link" href="/events"><span class="material-icons">school</span>EVENTS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" style="color: #ff4500" href="/tmembers"><div class="hello"><span class="material-icons">engineering</span>TOP SQUAD MEMBERS</div></a>
+        <a class="nav-link" style="color:#ff4500" href="/tmembers"><span class="material-icons">engineering</span>TOP SQUAD MEMBERS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" style="color: #000000" href="/news"><div class="hello"><span class="material-icons">text_snippet</span>NEWS</div></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" style="color: #000000" href="/comment"><div class="hello"><span class="material-icons">message</span>REVIEW</div></a>
+        <a class="nav-link" href="/news"><span class="material-icons">text_snippet</span>NEWS</a>
       </li>
       {% if user.is_authenticated %}
+        <li class="nav-item">
+        <a class="nav-link" href="/comment"><span class="material-icons">message</span>REVIEW</a>
+      </li>
       <div style="border-radius:50%" class="btn-group">
      <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      {{request.user.username}}
+      PROFILE
      </button>
       <div class="dropdown-menu">
                <a class="dropdown-item" href="/viewprofile">EDIT PROFILE</a>
@@ -65,14 +65,14 @@
               </div>
                 
         <li class="nav-item">
-        <a class="nav-link" style="color: #000000" href="/logout"><div class="hello"><span class="material-icons">lock_open</span>LOGOUT</div></a>
+        <a class="nav-link" href="/logout"><span class="material-icons">lock_open</span>LOGOUT</a>
       </li>
       {% else %}
-     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 
       </li>
        <li class="nav-item">
-        <a class="nav-link" style="color: #000000" href="/login"><div class="hello"><span class="material-icons">login</span>SIGNUP</div></a>
+        <a class="nav-link" href="/login"><span class="material-icons">login</span>SIGNUP</a>
       </li>
       {% endif %}
     
@@ -88,15 +88,17 @@
 </nav>
 
 <br><br><br>
-<div>
-<div id="fm" class="card">
-  <h1  id="pf" style="text-align:center;color:#FFFFFF" ><b>PROFILE</b></h1>
-  <img id="img" src="{{q.img.url}}" alt="name">
-  <p id="text"><span><b>NAME   :</b></span>{{q.user.username}}</p>
-  <p id="text"><span><b>EMAIL  :</b></span>{{q.user.email}}</p>
-  <p id="text"><span style="overflow-wrap: break-word;"><b>ABOUT :</b></span>{{q.about}}</p>
-  <br><br><br>
-</div>
+<div id="bc">
+     <h1  id="pf" style="text-align:center;color:#FFFFFF" ><b>PROFILE</b></h1>
+     
+   <div class="card">
+     <div id="img-b">
+     <img id="img" class="img" src="{{q.img.url}}" alt="Card image">
+     </div>
+    <h4 value="{{q.user.username}}"class="card-title">NAME:{{q.user.username}}</h4> 
+    <p style="overflow-wrap: break-word;"class="card-text">ABOUT:{{q.about}}</p>
+    <p class="card-text">EMAIL:{{q.user.email}}</p>
+    </div>
 </div>
 
 
@@ -109,19 +111,19 @@
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link"  style="color: #000000" href="/basic"><div class="hello"><span class="material-icons">home</span>HOME</div></a>
+        <a class="nav-link"  style="color: #FF0000" href="/basic"><span class="material-icons">home</span>HOME</a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" style="color: #000000" href="/members"><div class="hello"><span class="material-icons">emoji_people</span>MEMBERS</div></a>
+        <a class="nav-link" href="/members"><span class="material-icons">emoji_people</span>MEMBERS</a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" style="color: #000000" href="/pybot"><div class="hello"><span class="material-icons">location_searching</span>SQUAD SEARCH</div></a>
+        <a class="nav-link" href="/pybot"><span class="material-icons">location_searching</span>SQUAD SEARCH</a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" style="color: #000000" href="/aboutus"><div class="hello"><span class="material-icons">mail</span>ABOUT US</div></a>
+        <a class="nav-link" href="/aboutus"><span class="material-icons">mail</span>ABOUT US</a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" style="color: #000000" href="/contactus"><div class="hello"><span class="material-icons">phonelink_ring</span>CONTACT US</div></a>
+        <a class="nav-link" href="/contactus"><span class="material-icons">phonelink_ring</span>CONTACT US</a>
       </li>
     </ul>
     <span class="navbar-text">
@@ -133,104 +135,82 @@
     </body>
 <body id="bg" style="background-image: url('{% static "images/qw4.jpg"%}'); background-size: cover; background-size:100%;"></body> 
     
-<style>
+<style type="text/css">
+   body {
+       } 
+   #carousel{
+     padding :00px;
+    
+   }
+   .container{
+     padding-top: 20px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+    padding-left: 200px;
 
-body{
+   }
+   <style type="text/css">
+   body 
+   { background: yellow !important; 
+   }
+  .card{
+     width:400px;
+     height:600px;
+     background-color:black;
+     margin-left:3rem;
+     margin-top:20px;
+   
+ 
+   
+   }
+   #bc{
+     width:500px;
+     height:700px;
+     background-color:yellow;
+     margin-left:25rem;
+   }
   
-
-}
-#fm{
-
-    width: 550px;
-    height:550px;
-    margin-top:3rem;
-    margin-bottom: auto;
-    margin-left:30rem;
-    margin-right:20rem;
-    
-    position: relative;
-    display: flex;
-    justify-content: top;
-    flex-direction: column;
-    padding:10px;
-    border: 8px solid black;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    
-}
-.card{
-  background-color:#FF0000;
-  }
-  .hello:hover{
-    color:red;
-}
-#log{
-  text-align:center;
-}
-#box{
-    
-    margin-bottom: 10px;
-    margin-left:3rem;
-    padding-top:10px;
-    padding-down:0px;
-    border-radius: 0.25rem 0 0 0.25rem !important;
-}
-#box2{
-     width:200px;
-    height:30px;
-    margin-bottom: 10px;
-}
-#icon1{
-    color:black;
-    border-radius:5px;
-    box-color:red;
-    
-}
-#box3{
-    background-color:silver;
-}
-.login_btn {
-    width: 80px;
-    height:20px;
-    background: #33ccff !important;
-    color: white !important;
-    margin-top:10px;
-}
-#img{
-    width:180px;
-    height:180px;
-    border-radius:40%;
-    margin-left:10rem;
-    border:10px solid white;
-
-
-}
-#id_username{
-    width:250px;
-    height:20px;
+   .class-body{
+    margin-bottom:30rem;
+   } 
+     #img{
+     width:150px;
+     height:150px;
+     border-radius:50%;
     margin-left:10px;
-    margin-right:2rem;
+     margin-top:10px;
     
    
-   
-
-}
-.fas {
-    width:30px;
-    height:30px;
-    padding-right:0px;
-    padding-left:30px;
-}
-#id_about{
+  }
+  #img-b{
+      width:170px;
+     height:170px;
+     border-radius:50%;
+     background-color: #FF0000;
+     margin-left:7rem;
+  }
+  #pf{
+    margin-right:90px;
+    margin-left:40px;
+    text-shadow: 2px 2px red;
+    
+  }
+  .h1{
+    background-color:black;
+  }
+  .card-title{
     width:300px;
-    height:50px;
-}
-#id_img{
-    margin-bottom:10px;
-    padding-bottom:10px;
-}
-#id_email{
-    margin-right:3rem;
-}
+    height:20px;
+    color:red;
+    margin-top:20px;
+    margin-bottom:20px;
+  }
+  .card-text{
+    color:red;
+    font-family: Lucida Console;
+    font-size:20px;
+    margin-top:20px;
+  }
 </style>
 
    <!-- Optional JavaScript -->
@@ -240,10 +220,3 @@ body{
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   </body>
 </html>
-
-<!--
-  color animation code
-  animation-name:rainbow;
-       animation-duration:4s;
-       animation-iteration-count: infinite;
--->
