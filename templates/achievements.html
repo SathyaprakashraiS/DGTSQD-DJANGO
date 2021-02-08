@@ -127,7 +127,7 @@
 {% for i in obj reversed %}
   <div class="card" >
   <img src="{{i.img.url}}" class="im" alt="not found">
-  <h2 style="color: #FFFFFF;">{{i.info}}</h2>
+  <a style="color:#000000"><b>{{i.info}}</b></a>
   </div>
 {% endfor %}
 
@@ -255,6 +255,7 @@
    .im:hover {
   transform: scale(1.1);
 }
+/*
 @media (max-width: 767.98px)
 {
   .card{
@@ -328,6 +329,88 @@
    }
    .im:hover 
    {
+  transform: scale(1.1);
+}
+}
+*/
+@media (max-width: 767.98px)
+{
+  .card{
+    width:100%;
+    grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+    padding-top: 0%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    margin-left:5%;
+    margin-right:0%;
+    margin-top:0%;
+    margin-bottom:30%;
+    background-color:#FFFFFF;
+    border-radius:4%;
+   } 
+   .im{
+     width:350px;
+     height:250px;
+     padding left:10%;
+     transition: transform .2s;
+   }
+   .im:hover {
+  transform: scale(1.1);
+}
+}
+@media (max-width: 991.98px)
+{
+  .card{
+    width:90%;
+    grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+    padding-top: 0%;
+    padding-right: 1%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    margin-left:5%;
+    margin-right:0%;
+    margin-top:2%;
+    margin-bottom:30%;
+    background-color:#FFFFFF;
+    border-radius:4%;
+   } 
+   .im{
+     width:350px;
+     height:250px;
+     padding left:10%;
+     transition: transform .2s;
+   }
+   .im:hover {
+  transform: scale(1.1);
+}
+}
+@media (max-width: 1199.98px)
+{
+  .card{
+    width:90%;
+    grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+    padding-top: 0%;
+    padding-right: 1%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    margin-left:5%;
+    margin-right:5%;
+    margin-top:2%;
+    margin-bottom:30%;
+    background-color:#FFFFFF;
+    border-radius:4%;
+   } 
+   .im{
+     width:350px;
+     height:250px;
+     padding left:10%;
+     transition: transform .2s;
+   }
+   .im:hover {
   transform: scale(1.1);
 }
 }
