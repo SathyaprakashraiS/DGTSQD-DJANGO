@@ -13,22 +13,33 @@ class news(models.Model):
 class event(models.Model):
 	info=models.CharField(max_length=10000)
 	img=models.ImageField(upload_to='images', default='static/images/14358.jpg')
+	img=models.ImageField(upload_to='images', default='images/dlogo.jpeg')
+	
+class event(models.Model):
+	info=models.CharField(max_length=10000)
+	img=models.ImageField(upload_to='images', default='images/dlogo.jpeg')
 	name=models.CharField(max_length=100,default="EVENT")
 
 class achievements(models.Model):
 	info=models.CharField(max_length=10000)
 	img=models.ImageField(upload_to='images', default='static/images/14358.jpg')
+	img=models.ImageField(upload_to='images', default='images/dlogo.jpeg')
 
 class report(models.Model):
 	info=models.CharField(max_length=10000)
 	link=models.CharField(max_length=1000,default="NO LINK AVAILABLE")
 	img=models.ImageField(upload_to='images', default='static/images/14358.jpg')
+	img=models.ImageField(upload_to='images', default='images/dlogo.jpeg')
+
 
 class project(models.Model):
 	title=models.CharField(max_length=100,default="title")
 	info=models.CharField(max_length=5000)
 	author=models.CharField(max_length=100)
+
 	img=models.ImageField(upload_to='images', default='static/images/14358.jpg')
+
+	img=models.ImageField(upload_to='images', default='images/dlogo.jpeg')
 	link=models.CharField(max_length=1000,default="NO LINK AVAILABLE")
 
 class UserProfile(models.Model):
