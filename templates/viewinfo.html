@@ -11,20 +11,18 @@
 <div>
 <div id="fm" class="card">
   <img id="img" src="{{obj.img.url}}" alt="name"><br><br>
-  <p id="text"><b>{{obj.info}}</b></p>
+  <p id="text" style="text-align:center"><b>{{obj.info}}</b></p>
   <br><br><br>
   <a href="/newspost"><button type="button">BACK</button></a>
 </div></div>
 </body>
-<body id="bg" style="background-image: url('{% static "images/news1.jpg"%}'); background-size: cover; background-size:100%;"></body> 
+
 
 </html>
-<style>
-
-body{
-  
-
-}
+<style type="text/css">
+   body {
+          background-image: url('{% static "images/viewprofile.jpg"%}');background-repeat: no-repeat;background-attachment: fixed;background-size: cover;background-size:100%>
+        } 
 #fm{
 
     width: 600px;
@@ -51,6 +49,10 @@ body{
 
 
   }
+  #img:hover {
+  transform: scale(1.5);
+  
+}
   @keyframes rainbow {
   0% {
     background-color: #FFEEFF;
@@ -130,4 +132,96 @@ body{
 #id_email{
     margin-right:3rem;
 }
+ @media (max-width: 767.98px)
+    {
+      #fm{
+
+    width: 300px;
+    height:450px;
+    margin-top:8rem;
+    margin-bottom: auto;
+    margin-left:37rem;
+    margin-right:20rem;
+    background: yellow;
+    position: relative;
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    padding:10px;
+    border: 8px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+#img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    margin-left:25%;
+    border:10px solid red;
+    }
+    }
+    @media (max-width: 991.98px)
+    { 
+      #fm{
+
+    width: 300px;
+    height:450px;
+    margin-top:8rem;
+    margin-bottom: auto;
+    margin-left:37rem;
+    margin-right:20rem;
+    background: yellow;
+    position: relative;
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    padding:10px;
+    border: 8px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+#img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    margin-left:25%;
+    border:10px solid red;
+    }
+    }
+    @media (max-width: 1199.98px)
+    {
+      #fm{
+
+    width: 50%;
+    height:100%;
+    margin-top:8rem;
+    margin-bottom: auto;
+    margin-left:25%;
+    margin-right:20rem;
+    background: yellow;
+    position: relative;
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    padding:10px;
+    border: 8px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+#img
+      {
+      width:50%;
+      height:50%;
+      border-radius:50%;
+      margin-left:25%;
+      border:10px solid red;
+      }
+    }
 </style>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> 
+</body>
+
+
+</html>
