@@ -87,11 +87,11 @@
 
 {% for i in obj reversed %}
     <div class="card" style="width: 100%;">
-      <h1 style="text-align:center;font-size:200%">{{i.title}}</h1>
+      <h1 style="text-align:center;font-size:200%"><b>{{i.title}}</b></h1>
       <img src="{{i.img.url}}" class="im" alt="not found">
-      <h2 style="text-align:left;font-size:100%">{{i.author}}</h2>
-      <h3 style="text-align:left;font-size:100%">{{i.info}}</h3>
-      <h4 style="text-align:left;font-size:100%">{{i.link}}</h4><br>
+      <h2 style="text-align:left;font-size:100%;font-color:#FFFFFF;">{{i.author}}</h2>
+      <h3 style="text-align:left;font-size:100%;font-color:#FFFFFF;">{{i.info}}</h3>
+      <h4 style="text-align:left;font-size:100%;font-color:#FFFFFF;">{{i.link}}</h4><br>
      </div>
  {% endfor %}
 

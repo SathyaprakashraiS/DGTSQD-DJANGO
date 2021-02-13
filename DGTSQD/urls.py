@@ -29,6 +29,7 @@ from main.views import viewprofile
 from main.views import viewprofile
 urlpatterns = [
     path('admin/', admin.site.urls),
+     path('accounts/', include('allauth.urls')),
     path('',include("main.urls")),
     path('basic/',include("main.urls")),
     path('comment/',include("main.urls")),
