@@ -16,8 +16,8 @@ from django.conf import settings
 import django_heroku
 import dj_database_url
 from decouple import config
+import socket
 
-DISABLE_COLLECTSTATIC=1
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -68,7 +68,7 @@ TEMPLATES = [
 ]
 
 SITE_ID = 1
-DISABLE_COLLECTSTATIC=1
+
 
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_EMAIL_REQUIRED = True
@@ -122,16 +122,15 @@ TEMPLATES = [
 WSGI_APPLICATION = 'DGTSQD.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+ #Database
+ #https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 #DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-#}
-DATABASES = {
+    #'default': {
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': BASE_DIR / 'db.sqlite3',
+    #}
+DATABASES={   
     'default': {
         'ENGINE':'django.db.backends.postgresql_psycopg2',
         'NAME': 'DGTSQD',
@@ -141,6 +140,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
 
 
 # Password validation
