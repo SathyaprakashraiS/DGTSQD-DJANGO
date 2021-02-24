@@ -9,8 +9,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-        crossorigin="anonymous">
+       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>DIGIT SQUAD</title>
   </head>
   <body>
@@ -18,38 +23,37 @@
   <!--NAV BAR--       <nav class="navbar navbar-dark bg-dark">     -->
  <nav class="navbar fixed-top navbar-dark bg-light">
   <nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
-<div style="width: 200px;">
+<div >
       <img style="width:200px ;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
       <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
-       
-    <span class="navbar-toggler-icon"></span>
+    
   </button>
   </div>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" style="color: #ff4500;font-family:Monaco;" href="/basic"><div class="hello"><span class="material-icons">home</span>HOME</div><!--<span class="sr-only">(current)</span>--></a>
+        <a class="nav-link" style="color: #ff4500" href="/basic"><div class="hello"><span class="material-icons">home</span>HOME</div><!--<span class="sr-only">(current)</span>--></a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" style="color: #000000;font-family:Monaco;" href="/newspost"><div class="hello"><span class="material-icons">article</span>TECH BYTES</div></a>
+        <a class="nav-link" style="color: #000000" href="/newspost"><div class="hello"><span class="material-icons">article</span>TECH BYTES</div></a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" style="color: #000000;font-family:Monaco;" href="/achievements"><div class="hello"><span class="material-icons">emoji_events</span>ACHIEVEMENTS</div></a>
+        <a class="nav-link" style="color: #000000" href="/achievements"><div class="hello"><span class="material-icons">emoji_events</span>ACHIEVEMENTS</div></a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" style="color: #000000;font-family:Monaco;" href="/project"><div class="hello"><span class="material-icons">star</span>PROJECTS</div></a>
+        <a class="nav-link" style="color: #000000" href="/project"><div class="hello"><span class="material-icons">star</span>PROJECTS</div></a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" style="color: #000000;font-family:Monaco;" href="/events"><div class="hello"><span class="material-icons">school</span>EVENTS</div></a>
+        <a class="nav-link" style="color: #000000" href="/events"><div class="hello"><span class="material-icons">school</span>EVENTS</div></a>
       </li>
         <li class="nav-item">
-        <a class="nav-link" style="color: #000000;font-family:Monaco;" href="/tmembers"><div class="hello"><span class="material-icons">engineering</span>TOP SQUAD MEMBERS</div></a>
+        <a class="nav-link" style="color: #000000" href="/tmembers"><div class="hello"><span class="material-icons">engineering</span>TOP SQUAD MEMBERS</div></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" style="color: #000000;font-family:Monaco;" href="/news"><div class="hello"><span class="material-icons">text_snippet</span>NEWS</div></a>
+        <a class="nav-link" style="color: #000000" href="/news"><div class="hello"><span class="material-icons">text_snippet</span>NEWS</div></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" style="color: #000000;font-family:Monaco;" href="/comment"><div class="hello"><span class="material-icons">message</span>REVIEW</div></a>
+        <a class="nav-link" style="color: #000000" href="/comment"><div class="hello"><span class="material-icons">message</span>REVIEW</div></a>
       </li>
       {% if user.is_authenticated %}
       <div style="border-radius:50%" class="btn-group">
@@ -81,47 +85,24 @@
 </nav>
 </nav>
 <!--NAV BAR-->
-  <!--<div class="container my-5 w-100">-->
-  <!--  <img src="{% static 'images/z2.jpg' %}" class="d-block w-100" alt="OOPS IMAGE ERROR">-->
-    <!--<div id="carousel" class="carousel slide" data-ride="carousel">
-    
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="{% static 'images/z2.jpg' %}" class="responsive" sizes="(max-width:320px)280px,(max-width:480px)440px,800px" alt="OOPS IMAGE ERROR" >
-      <div class="centered mt-5" style="color:#FFFFFF;"> “The advance of technology is based on making it fit in so that you don't really even notice it, so it's part of everyday life.”<br>
-Bill Gates, Co-founder of Microsoft.<br><br><br>“It's not a faith in technology. It's faith in people.”<br>
-Steve Jobs, Co-founder of Apple.</div>
-    </div>
-    <div class="carousel-item">
-      <img src="{% static 'images/ps5.jpg' %}" class="responsive" alt="OOPS IMAGE ERROR" width="1920" height="1080">
-    </div>
-    <div class="carousel-item">
-      <img src="{% static 'images/cpu.jpg' %}" class="responsive" alt="OOPS IMAGE ERROR" width="1920" height="1080">
-    </div>
-    <div class="carousel-item">
-      <img src="{% static 'images/kbm.jpg' %}" class="responsive" alt="OOPS IMAGE ERROR" width="1920" height="1080">
-    </div>--
-  </div>
-</div>-->
-<a href="/newspost" style="text-align: center;color:#000000"><h2><b>INTRESTING TECHBYTES</b></h2></a><br>
-<div id="demo" class="carousel slide" data-ride="carousel">
+
+    <a href="/newspost" style="text-align: center;color:#000000"><h2><b>INTRESTING TECHBYTES</b></h2></a><br>
+<div id="demo" class="carousel slide  w3-animate-left" data-ride="carousel">
   <ul class="carousel-indicators">
     <li data-target="#demo" data-slide-to="0" class="active"></li>
     <li data-target="#demo" data-slide-to="1"></li>
     <li data-target="#demo" data-slide-to="2"></li>
     <li data-target="#demo" data-slide-to="3"></li>
   </ul>
-  <div class="carousel-inner">
+<div class="carousel-inner">
     <div class="carousel-item active">
-      <!--<img src="{% static 'images/1post.jpeg' %}" alt="ERROR RETRYING" width="600" height="300">-->
       <img src="{% static 'images/z2.jpg' %}" class="responsive" sizes="(max-width:320px)280px,(max-width:480px)440px,800px" alt="OOPS IMAGE ERROR">
       <div class="carousel-caption">
         <h3>TECH POST 1</h3>
         <p>TECHPOST 1 DISCRIPTION</p>
       </div>   
     </div>
-    <div class="carousel-item">
-      <!--<img src="{% static 'images/2post.jpeg' %}" alt="ERROR RETRYING" width="600" height="300">-->
+<div class="carousel-item">
       <img src="{% static 'images/ps5.jpg' %}" class="responsive" sizes="(max-width:320px)280px,(max-width:480px)440px,800px" alt="OOPS IMAGE ERROR">
       <div class="carousel-caption">
         <h3>TECH POST 2</h3>
@@ -129,7 +110,6 @@ Steve Jobs, Co-founder of Apple.</div>
       </div>   
     </div>
     <div class="carousel-item">
-      <!--<img src="{% static 'images/3post.jpeg' %}" alt="ERROR RETRYING" width="600" height="300">-->
       <img src="{% static 'images/cpu.jpg' %}" class="responsive" sizes="(max-width:320px)280px,(max-width:480px)440px,800px" alt="OOPS IMAGE ERROR">
       <div class="carousel-caption">
         <h3>TECH POST 3</h3>
@@ -137,7 +117,6 @@ Steve Jobs, Co-founder of Apple.</div>
       </div>   
     </div>
   <div class="carousel-item">
-      <!--<img src="{% static 'images/3post.jpeg' %}" alt="ERROR RETRYING" width="600" height="300">-->
       <img src="{% static 'images/kbm.jpg' %}" class="responsive" sizes="(max-width:320px)280px,(max-width:480px)440px,800px" alt="OOPS IMAGE ERROR">
       <div class="carousel-caption">
         <h3>TECH POST 4</h3>
@@ -151,26 +130,10 @@ Steve Jobs, Co-founder of Apple.</div>
     <span class="carousel-control-next-icon"></span>
   </a>
 </div>
-    <!--<img src="{% static 'images/z2.jpg' %}" class="responsive" alt="OOPS IMAGE ERROR" sizes="(max-width:320px)280px,(max-width:480px)440px,800px">
-    {% if user.is_authenticated %}
-      {% block content %}
-        <h1>hello LOGINed USER</h1>
-        <h2>{{name}}</h2>
-      {% endblock %}
-    {% else %}
-      <p><a href="/login">LOGIN</a></p>
-    {% endif %}
-    <img src="{% static 'images/i1.png' %}"  alt="OOPS IMAGE ERROR" width="160" height="160">
-    <img src="https://img.icons8.com/cute-clipart/50/000000/add-to-loud.png"/>
-<img src="https://img.icons8.com/ios/50/000000/add-to-loud--v2.png"/>
-<img src="https://img.icons8.com/fluent/96/000000/bonds.png"/>
-<img src="https://img.icons8.com/fluent/96/000000/virtual-reality.png"/>
-<img src="https://img.icons8.com/color/96/000000/launched-rocket--v1.png"/>
-    -->
 
 <br>
 <h1 style="text-align: center;">WHY DIGIT SQUAD</h1><br>
-<div class="grid-container">
+<div class="grid-container w3-animate-left">
 <div class="grid-item">
 <img src="https://img.icons8.com/fluent/96/000000/iphone.png" class="im">
 <br><p><b><a style="color:#FFFFFF;font-size: 13px;">KNOW MORE ABOUT</a></b></p><p><b><a style="color:#FFFFFF;font-size: 13px;">GADGETS AND TECHNOLOGIES</a></b></p>
@@ -207,12 +170,7 @@ Steve Jobs, Co-founder of Apple.</div>
 </div>
 <br><br><br>
 
-      <!--<div class="alert alert-warning w-50 align-right" role="alert">
-       <h1 style="text-align:center;">EAT HEALTHY STAY HEALTHY</h1>
-		  </div>-->
-    <!--<h1 style="text-align:center;">EAT HEALTHY STAY HEALTHY</h1><br>-->
-    <h1 style="text-align:center;">DOMAIN WE WORK ON</h1>
-    <body>
+ <h1 style="text-align:center;">DOMAIN WE WORK ON</h1>
     <div class="containers">
         <div class="cardss">
             <div class="face face1">
@@ -223,7 +181,8 @@ Steve Jobs, Co-founder of Apple.</div>
             </div>
             <div class="face face2">
                 <div class="content">
-                    <p>Visible treat engaging CREATIVITY we do here! </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                        <a href="#">Read More</a>
                 </div>
             </div>
         </div>
@@ -236,7 +195,8 @@ Steve Jobs, Co-founder of Apple.</div>
             </div>
             <div class="face face2">
                 <div class="content">
-                    <p>Knowledge is power and we Establish it her through Innovative Coding Skills</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                        <a href="#">Read More</a>
                 </div>
             </div>
         </div>
@@ -250,23 +210,26 @@ Steve Jobs, Co-founder of Apple.</div>
             <div class="face face2">
                 <div class="content">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                        <a href="#">Read More</a>
                 </div>
             </div>
         </div>
     </div>
-</body>
+
 
 <h1 style="text-align:center;">ABOUT US</h1>
 <a style="text-align:center;font-size:100%">The club was formed as a group of premier technology enthusiasts in VIT, who practically live and sense all things technology. Not only to learn how to manufacture and work in the industry of tech but the club would practically want to see people use technology in the best way possible. Getting the most out of technology in the right way is our vision.</a>
 
-  <br><br>
-    <button onclick="toggleShape()">RECREATE MODEL</button>
-    <input type="checkbox" id="backfaces" onclick="toggleBackfaces()" checked><label for="backfaces">Backfaces visible</label>
+
+ <div class="controls">
   
+    <div><button onclick="toggleShape()">Toggle Shape</button></div>
+    <div><input type="checkbox" id="backfaces" onclick="toggleBackfaces()" checked><label for="backfaces">Backfaces visible</label></div>
+  </div>
   <div id="container">
     <div id="stage">
       <div id="shape" class="cube backfaces">
-        <div id="text" class="plane one">!</div>
+        <div id="text" class="plane one">:)</div>
         <div id="text" class="plane two">JOIN</div>
         <div id="text" class="plane three">DIGIT</div>
         <div id="text" class="plane four">SQUAD</div>
@@ -281,21 +244,17 @@ Steve Jobs, Co-founder of Apple.</div>
       </div>
     </div>
   </div>
-<!--
-<div class="foot">
-<div class="mail">
 
+<div class="foot">
+<div class="mail" >
 <p class="font-weight-bold">mail us @<a href="www.gmail.com">www.gmail.com</a></p>
 <p> FOLLOW US ON :</p>
-<a href="https://www.facebook.com/digitsquadvitv/"><i  class="fa fa-facebook mx-auto  pr-5" style="font-size:70px;color:#00AAFF"  ></i></a>
-<a href="https://www.instagram.com/digitsquad_vit/"><i class="fa fa-instagram mx-auto" style="font-size:70px;color:#EEAAAA" ></i></a>
+<a href="https://www.facebook.com/digitsquadvitv/"><i  class="fa fa-facebook " style="font-size:30px;color:#00AAFF"  ></i></a>
+<a href="https://www.instagram.com/digitsquad_vit/"><i class="fa fa-instagram  " style="font-size:30px;color:#EEAAAA" ></i></a>
 <br><br>
-<p id="cop" class="font-weight-bold mx-auto">©2021 CREATED AND MANAGED BY :DIGITSQUAD VIT</p>
+<p id="cop" class="font-weight-bold ">©2021 CREATED AND MANAGED BY :DIGITSQUAD VIT</p>
 </div>
 </div>
--->
-
-                    
 <nav class="navbar navbar-expand-sm bg-light">
 <nav class="navbar navbar-expand-lg navbar-warning bg-light">
   <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
@@ -304,38 +263,24 @@ Steve Jobs, Co-founder of Apple.</div>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link"  style="color: #FF0000;font-family:Monaco;" href="/basic"><div class="hello"><span class="material-icons">home</span>HOME</div></a>
+        <a class="nav-link"  style="color: #FF0000" href="/basic"><div class="hello"><span class="material-icons">home</span>HOME</div></a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" style="color: #000000;font-family:Monaco;" href="/members"><div class="hello"><span class="material-icons">emoji_people</span>MEMBERS</div></a>
+        <a class="nav-link" style="color: #000000" href="/members"><div class="hello"><span class="material-icons">emoji_people</span>MEMBERS</div></a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" style="color: #000000;font-family:Monaco;" href="/pybot"><div class="hello"><span class="material-icons">location_searching</span>SQUAD SEARCH</div></a>
+        <a class="nav-link" style="color: #000000" href="/pybot"><div class="hello"><span class="material-icons">location_searching</span>SQUAD SEARCH</div></a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" style="color: #000000;font-family:Monaco;" href="/aboutus"><div class="hello"><span class="material-icons">mail</span>ABOUT US</div></a>
+        <a class="nav-link" style="color: #000000" href="/aboutus"><div class="hello"><span class="material-icons">mail</span>ABOUT US</div></a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" style="color: #000000;font-family:Monaco;" href="/contactus"><div class="hello"><span class="material-icons">phonelink_ring</span>CONTACT US</div></a>
+        <a class="nav-link" style="color: #000000" href="/contactus"><div class="hello"><span class="material-icons">phonelink_ring</span>CONTACT US</div></a>
       </li>
       {% if request.user.is_superuser %} 
           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-          <!--<li class="nav-item">
-          <a class="nav-link" href="/upload"><span class="material-icons">question_answer</span>BYTES UPLOAD</a>
-          </li>
-          <li class="nav-item">
-          <a class="nav-link" href="/uploadevents"><span class="material-icons">question_answer</span>EVENTS UPLOAD</a>
-          </li>
-          <li class="nav-item">
-          <a class="nav-link" href="/uploadproject"><span class="material-icons">question_answer</span>PROJECT UPLOAD</a>
-          </li>
-          <li class="nav-item">
-          <a class="nav-link" href="/addachievements"><span class="material-icons">question_answer</span>ACHIEVEMENTS UPLOAD</a>
-          </li>
-          <li class="nav-item">
-          <a class="nav-link" href="/reportnews"><span class="material-icons">question_answer</span>ADD NEWS</a>
-          </li>-->
+         
            
        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   ADMIN UPLOADS
@@ -373,8 +318,7 @@ Steve Jobs, Co-founder of Apple.</div>
   </div>
 </nav>
 </nav>
-<!--<body id="bg" style="background-image: url('{% static 'images/b1.jpg'%}'); background-size: 100%; background-size:100%;"></body>
-    </body>-->
+
 
     
 <style type="text/css">
@@ -382,374 +326,53 @@ Steve Jobs, Co-founder of Apple.</div>
           background-image: url('{% static 'images/b1.jpg'%}'); background-size:cover;
 
        } 
-    
-   #carousel{
-     padding :0px;
-    
-   }
-   .container{
-     padding-top: 20px;
-    padding-right: 5px;
-    padding-bottom: 20px;
-    padding-left: 200px;
 
-   }
-   
-   .ca{
-   padding-top: 10px;
-    padding-right: 30px;
-    padding-bottom: 10px;
-    padding-left: 7px;
-    margin-left:10px;
-    margin-right:1400px;
-    margin-up:10px;
-    margin-down:10px;
-    background-color:#000000;
-    border-radius:100px;
-
-   } 
-
-   .responsive{
-    width: 100%;
-    height: auto;
-   }
-   .caca{
-   padding-top: 20px;
-    padding-right: 60px;
-    padding-bottom: 20px;
-    padding-left: 14px;
-    margin-left:20px;
-    margin-right:1400px;
-    margin-up:20px;
-    margin-down:20px;
-    background-color:#000000;
-    border-radius:100px;
-    
-   } 
-.grid-container{
-  display: inline-grid;
-  grid-template-columns: auto auto auto auto;
-  justify-content: space-evenly;
-  grid-row-gap: 40px;
-  grid-column-gap:50px;
-  padding-left: 200px;
+  #img2{
+    width:200px;
+    height:200px;
+    top:10%;
+    padding-bottom:20px;
+  }
+  #cop{
   
-}
-.grid-containertwo{
-  display: inline-grid;
-  grid-template-columns: auto auto auto auto;
-  justify-content: space-evenly;
-  grid-row-gap: 40px;
-  grid-column-gap:50px;
-  padding-left: 350px;
-  
+    padding-right:300px;
+  }
+  #text{
+    font-size:30px;
+    font-family: 'Lucida Grande', Verdana, Arial;
+    padding-top:70px;
+
+  }
+
+  .foot{
+    width:100%;
+    height:200px;
+    padding-right:30px;
+    padding-left:330px;
+    background:linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    -webkit-perspective: 800; /* For compatibility with iPhone 3.0, we leave off the units here */
+    -webkit-perspective-origin: 50% 225px;
+  }
+  .mail{
+     align-item:center;
+     justify-content:center;
+     margin-left:20%;
+     padding-right:30px;
+  }
+
+  body {
+  background-color: black;
+  color: white;
+  font-family: 'Lucida Grande', Verdana, Arial;
+  font-size: 12px;
+  background-image: -webkit-gradient(radial,
+                        50% 500, 1,
+                        50% 500, 400,
+                        from(rgba(255, 255, 255, 0.3)),
+                        to(rgba(255, 255, 255, 0)));
+ background-repeat: no-repeat;
 }
 
-
-@media (max-width: 767.98px) {
-  .grid-container{
-  display: inline-grid;
-  grid-template-columns: auto  ;
-  justify-content: space-evenly;
-  grid-row-gap: 20px;
-  grid-column-gap:50px;
-  padding-left: 50px;
-  
-}
-.grid-containertwo{
-  display: inline-grid;
-  grid-template-columns: auto ;
-  justify-content: space-evenly;
-  grid-row-gap: 40px;
-  grid-column-gap:50px;
-  padding-left: 50px;
-  
-}
- }
-
-// Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) { .grid-container{
-  display: inline-grid;
-  grid-template-columns: auto auto auto ;
-  justify-content: space-evenly;
-  grid-row-gap: 40px;
-  grid-column-gap:50px;
-  padding-left: 200px;
-  
-}
-.grid-containertwo{
-  display: inline-grid;
-  grid-template-columns: auto auto auto;
-  justify-content: space-evenly;
-  grid-row-gap: 40px;
-  grid-column-gap:50px;
-  padding-left: 350px;
-  
-} }
-
-// Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) { .grid-container{
-  display: inline-grid;
-  grid-template-columns: auto auto auto auto;
-  justify-content: space-evenly;
-  grid-row-gap: 40px;
-  grid-column-gap:50px;
-  padding-left: 200px;
-  
-}
-.grid-containertwo{
-  display: inline-grid;
-  grid-template-columns: auto auto auto auto;
-  justify-content: space-evenly;
-  grid-row-gap: 40px;
-  grid-column-gap:50px;
-  padding-left: 350px;
-  
-} }
-
-
-
-.grid-containe{
-  display: inline-grid;
-  grid-template-columns: auto auto auto;
-  justify-content: space-evenly;
-  grid-row-gap: 50px;
-  grid-column-gap:50px;
-  margin-right:10rem;
-  margin-left:17rem;
-
- 
-}
-.hello:hover{
-    color:red;
-}
-.grid-item{
-  
-  background-color:#000000;
-  width:250px;
-  height:250px;
-  border-radius:50%;
-  padding-top:12px;
-  padding-left:73px;
- 
-}
-.im{
-     size:30px;
-     height:96px;
-     transition: transform .2s;
-   }
-   .im:hover {
-  transform: scale(1.17);
-}
-.grid-item:hover{
-  border:10px solid red;
-  transform: scale(1.1);
-  padding-left:70px;
-  transition: transform .2s;
-}
-#{
-  background-color:#FFFFFF;
-  width:270px;
-  height:270px;
-  border-radius:50%;
-  padding-top:40px;
-  padding-left:45px;
-}
-
-.centered {
-  position: absolute;
-  top: 30%;
-  left: 25%;
-  transform: translate(-50%, -50%);
-  margin-right:30rem;
-  font-family:cursive;
-}
-
-
-/* CARD */
-/*
-.containers{
-    width: 1000px;
-    margin-left:20%;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-}
-
-.containers .cardss{
-    position: relative;
-    cursor: pointer;
-}
-
-.containers .cardss .face{
-    width: 300px;
-    height: 200px;
-    transition: 0.5s;
-}
-
-.containers .cardss .face.face1{
-    position: relative;
-    background: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    transform: translateY(100px);
-}
-
-.containers .cardss:hover .face.face1{
-    background: #ff0057;
-    transform: translateY(0);
-}
-
-.containers .cardss .face.face1 .content{
-    opacity: 0.2;
-    transition: 0.5s;
-}
-
-.containers .cardss:hover .face.face1 .content{
-    opacity: 1;
-}
-
-.containers .cardss .face.face1 .content img{
-    max-width: 100px;
-}
-
-.containers .cardss .face.face1 .content h3{
-    margin: 10px 0 0;
-    padding: 0;
-    color: #fff;
-    text-align: center;
-    font-size: 1.5em;
-}
-
-.containers .cardss .face.face2{
-    position: relative;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-    transform: translateY(-100px);
-}
-
-.containers .cardss:hover .face.face2{
-    transform: translateY(0);
-}
-
-.containers .cardss .face.face2 .content p{
-    margin: 0;
-    padding: 0;
-}
-
-.containers .cardss .face.face2 .content a{
-    margin: 15px 0 0;
-    display:  inline-block;
-    text-decoration: none;
-    font-weight: 900;
-    color: #333;
-    padding: 5px;
-    border: 1px solid #333;
-}
-
-.containers .cardss .face.face2 .content a:hover{
-    background: #333;
-    color: #fff;
-}*/
-.containers{
-    width: 1000px;
-    margin-left:20%;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-}
-
-.containers .cardss{
-    position: relative;
-    cursor: pointer;
-}
-
-.containers .cardss .face{
-    width: 300px;
-    height: 200px;
-    transition: 0.5s;
-}
-
-.containers .cardss .face.face1{
-    position: relative;
-    background: #000;
-    border:5px solid red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    transform: translateY(100px);
-}
-
-.containers .cardss:hover .face.face1{
-    background: linear-gradient(to right, #ff9900 35%, #FFFFFF 94%);
-    transform: translateY(0);
-}
-
-.containers .cardss .face.face1 .content{
-    opacity: 0.2;
-    transition: 0.5s;
-}
-
-.containers .cardss:hover .face.face1 .content{
-    opacity: 1;
-}
-
-.containers .cardss .face.face1 .content img{
-    max-width: 100px;
-}
-
-.containers .cardss .face.face1 .content h3{
-    margin: 10px 0 0;
-    padding: 0;
-    color: red;
-    text-align: center;
-    font-size: 1.5em;
-}
-
-.containers .cardss .face.face2{
-    position: relative;
-    background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-    transform: translateY(-100px);
-}
-
-.containers .cardss:hover .face.face2{
-    transform: translateY(0);
-}
-
-.containers .cardss .face.face2 .content p{
-    margin: 0;
-    padding: 0;
-}
-
-.containers .cardss .face.face2 .content a{
-    margin: 15px 0 0;
-    display:  inline-block;
-    text-decoration: none;
-    font-weight: 900;
-    color: #333;
-    padding: 5px;
-    border: 1px solid #333;
-}
-
-.containers .cardss .face.face2 .content a:hover{
-    background: #FF7788;
-    color: #AABBCC;
-}
-/*CUBE*/
 #container {
   width: 100%;
   height: 700px;
@@ -917,95 +540,140 @@ Steve Jobs, Co-founder of Apple.</div>
 .controls > div {
   margin: 10px;
 }
-/*LAST DIVISION*/
-#cop{
-    padding-left:100px;
+    
+   #carousel{
+     padding :0px;
+    
+   }
+   .container{
+     padding-top: 20px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+    padding-left: 200px;
+
+   }
+   
+   .ca{
+   padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 7px;
+    margin-left:10px;
+    margin-right:1400px;
+    margin-up:10px;
+    margin-down:10px;
+    background-color:#000000;
+    border-radius:100px;
+
+   } 
+
+   .responsive{
+    width: 100%;
+    height: auto;
+   }
+   .caca{
+   padding-top: 20px;
+    padding-right: 60px;
+    padding-bottom: 20px;
+    padding-left: 14px;
+    margin-left:20px;
+    margin-right:1400px;
+    margin-up:20px;
+    margin-down:20px;
+    background-color:#000000;
+    border-radius:100px;
+    
+   } 
+.grid-container{
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+  grid-row-gap: 40px;
+  grid-column-gap:50px;
+  padding-left: 200px;
+  animation-delay: 3s;
+  
+}
+.grid-containertwo{
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+  grid-row-gap: 40px;
+  grid-column-gap:50px;
+  padding-left: 350px;
+  
+}
+
+
+@media (max-width: 767.98px) {
+  .grid-container{
+  display: inline-grid;
+  grid-template-columns: auto  ;
+  justify-content: space-evenly;
+  grid-row-gap: 20px;
+  grid-column-gap:50px;
+  padding-left: 50px;
+  
+}
+.grid-containertwo{
+  display: inline-grid;
+  grid-template-columns: auto ;
+  justify-content: space-evenly;
+  grid-row-gap: 40px;
+  grid-column-gap:50px;
+  padding-left: 50px;
+  
+}
+
+ #cop{
+  
+    
   }
   #text{
-    font-size:30px;
+    font-size:10px;
     font-family: 'Lucida Grande', Verdana, Arial;
-    padding-top:70px;
+   
 
   }
 
   .foot{
-    width:100%;
-    height:200px;
+    width:100px;
+    height:auto;
+    left:100%;
+     padding-right:200px;
+ 
     background:linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+   
   }
   .mail{
-     align-item:center;
-     justify-content:center;
-     margin-left:30%;
-  } 
+      width:100px;
+     padding-right:200px;
+  
+  }
 
-
-
-.containerrs {
-    width: 1000px;
+  .containers{
+    width: 25%;
     position: relative;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.containerrs .cardrs {
+
+.containers .cardss{
     position: relative;
-    border-radius: 10px;
+    cursor: pointer;
 }
 
-.containerrs .cardrs .icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #f00;
-    transition: 0.7s;
-    z-index: 1;
-}
-
-.containerrs .cardrs:nth-child(1) .icon {
-    background: #e07768;
-}
-
-.containerrs .cardrs:nth-child(2) .icon {
-    background: #6eadd4;
-}
-
-.containerrs .cardrs:nth-child(3) .icon {
-    background: #4aada9;
-}
-
-
-.containerrs .cardrs .icon .fa {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 80px;
-    transition: 0.7s;
-    color: #fff;
-}
-
-i {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 80px;
-    transition: 0.7s;
-    color: #fff;
-}
-
-.containerrs .cardrs .face {
+.containers .cardss .face{
     width: 300px;
     height: 200px;
     transition: 0.5s;
 }
 
-.containerrs .cardrs .face.face1 {
+.containers .cardss .face.face1{
     position: relative;
-    background: #333;
+    background: #000;
+    border:5px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1013,62 +681,266 @@ i {
     transform: translateY(100px);
 }
 
-.containerrs .cardrs:hover .face.face1{
-    background: #ff0057;
-    transform: translateY(0px);
+.containers .cardss:hover .face.face1{
+    background: linear-gradient(to right, #ff9900 35%, #FFFFFF 94%);
+    transform: translateY(0);
 }
 
-.containerrs .cardrs .face.face1 .content {
-    opacity: 1;
+.containers .cardss .face.face1 .content{
+    opacity: 0.2;
     transition: 0.5s;
 }
 
-.containerrs .cardrs:hover .face.face1 .content {
+.containers .cardss:hover .face.face1 .content{
     opacity: 1;
 }
 
-.containerrs .cardrs .face.face1 .content i{
+.containers .cardss .face.face1 .content img{
     max-width: 100px;
 }
 
-.containerrs .cardrs .face.face2 {
+.containers .cardss .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: red;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.containers .cardss .face.face2{
     position: relative;
-    background: #fff;
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+
+.containers .cardss:hover .face.face2{
+    transform: translateY(0);
+}
+
+.containers .cardss .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+}
+
+.containers .cardss .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.containers .cardss .face.face2 .content a:hover{
+    background: #FF7788;
+    color: #AABBCC;
+}
+ }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { .grid-container{
+  display: inline-grid;
+  grid-template-columns: auto auto auto ;
+  justify-content: space-evenly;
+  grid-row-gap: 40px;
+  grid-column-gap:50px;
+  padding-left: 200px;
+  
+}
+.grid-containertwo{
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
+  grid-row-gap: 40px;
+  grid-column-gap:50px;
+  padding-left: 350px;
+  
+} }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { .grid-container{
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+  grid-row-gap: 40px;
+  grid-column-gap:50px;
+  padding-left: 200px;
+  
+}
+.grid-containertwo{
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+  grid-row-gap: 40px;
+  grid-column-gap:50px;
+  padding-left: 350px;
+  
+} 
+
+}
+
+
+
+.grid-containe{
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
+  grid-row-gap: 50px;
+  grid-column-gap:50px;
+  margin-right:10rem;
+  margin-left:17rem;
+
+ 
+}
+.hello:hover{
+    color:red;
+}
+.grid-item{
+  
+  background-color:#000000;
+  width:250px;
+  height:250px;
+  border-radius:50%;
+  padding-top:12px;
+  padding-left:73px;
+ 
+}
+.im{
+     size:30px;
+     height:96px;
+     transition: transform .2s;
+   }
+   .im:hover {
+  transform: scale(1.17);
+}
+.grid-item:hover{
+  border:10px solid red;
+  transform: scale(1.1);
+  padding-left:70px;
+}
+#{
+  background-color:#FFFFFF;
+  width:270px;
+  height:270px;
+  border-radius:50%;
+  padding-top:40px;
+  padding-left:45px;
+}
+
+.centered {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  margin-right:30rem;
+  font-family:cursive;
+}
+#navbarText{
+font-size:12px;
+}
+
+/*CARD */
+
+.containers{
+    width: 50%;
+    margin-left:20%;
+    position: relative;
+    display: flex;
+    margin-right:20px;
+    padding:20px;
+    justify-contents:space-evenly;
+}
+
+.containers .cardss{
+    position: relative;
+    cursor: pointer;
+}
+
+.containers .cardss .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.containers .cardss .face.face1{
+    position: relative;
+    background: #000;
+    border:5px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.containers .cardss:hover .face.face1{
+    background: linear-gradient(to right, #ff9900 35%, #FFFFFF 94%);
+    transform: translateY(0);
+}
+
+.containers .cardss .face.face1 .content{
+    opacity: 0.2;
+    transition: 0.5s;
+}
+
+.containers .cardss:hover .face.face1 .content{
+    opacity: 1;
+}
+
+.containers .cardss .face.face1 .content img{
+    max-width: 100px;
+}
+
+.containers .cardss .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: red;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.containers .cardss .face.face2{
+    position: relative;
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
     transform: translateY(-100px);
 }
 
-.containerrs .cardrs:hover .face.face2{
+.containers .cardss:hover .face.face2{
     transform: translateY(0);
 }
 
-.containerrs .cardrs .face.face2 .content p {
+.containers .cardss .face.face2 .content p{
     margin: 0;
     padding: 0;
-    text-align: center;
-    color: #414141;
 }
 
-.containerrs .cardrs .face.face2 .content h3 {
-    margin: 0 0 10px 0;
-    padding: 0;
-    color: #fff;
-    font-size: 24px;
-    text-align: center;
-    color: #414141;
-} 
-
-.containerrs a {
+.containers .cardss .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
     text-decoration: none;
-    color: #414141;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
 }
 
-
+.containers .cardss .face.face2 .content a:hover{
+    background: #FF7788;
+    color: #AABBCC;
+}
 </style>
 
 <script>
@@ -1129,11 +1001,9 @@ function toggleBackfaces()
   else
     removeClassName(shape, 'backfaces');
 }
+
 </script>
-<style type="text/css">
 
-
-</style>
    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
