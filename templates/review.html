@@ -86,7 +86,7 @@
   {% if request.user.is_authenticated %}
   <h1 style="text-align:center;"><a style="color: #11EBF3" class="font">We value your opinion,Tell us anything we can take care of!</a></h1>
 <form action="add_comment/">{% csrf_token %}
-<div class="input-group">
+<div class="input-group mb-3 w-25">
   <div class="input-group-prepend">
  
     <span class="input-group-text" id="inputGroup-sizing-default">NAME</span>
@@ -94,7 +94,7 @@
   <input type="text" name ="head" placeholder="enter your name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
 </div>
 
-<div class="input-group">
+<div class="input-group mb-3 w-50">
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-default">COMMENT</span>
   </div>
@@ -110,8 +110,8 @@
  <h1 style="text-align:center;"><a style="color: #11EBF3;" class="font">HEAR FROM OUR TOP USER'S</a></h1>
 {% for i in obj reversed%}
 <ul class="list-group">
-  <li class="list-group-item"><b>NAME  :</b>{{i.name}}</li>
-  <li  style="overflow-wrap: break-word;"class="list-group-item"><b>COMMENT  :</b>{{i.comment}}</li>
+  <li class="list-group-item w-25"><b>NAME  :</b>{{i.name}}</li>
+  <li  style="overflow-wrap: break-word;"class="list-group-item w-25"><b>COMMENT  :</b>{{i.comment}}</li>
   <br>
  </ul>
 {% endfor %}
