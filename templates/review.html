@@ -86,7 +86,7 @@
   {% if request.user.is_authenticated %}
   <h1 style="text-align:center;"><a style="color: #11EBF3" class="font">We value your opinion,Tell us anything we can take care of!</a></h1>
 <form action="add_comment/">{% csrf_token %}
-<div class="input-group mb-3 w-25%">
+<div class="input-group mb-3 w-25">
   <div class="input-group-prepend">
  
     <span class="input-group-text" id="inputGroup-sizing-default">NAME</span>
@@ -94,7 +94,7 @@
   <input type="text" name ="head" placeholder="enter your name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
 </div>
 
-<div class="input-group mb-3 w-50%">
+<div class="input-group mb-3 w-50">
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-default">COMMENT</span>
   </div>
@@ -241,6 +241,16 @@
    {
     font-size:100%;
    }
+
+   .input-group-prepend {
+  width : 35%; /*adjust as needed*/
+}
+
+.input-group-prepend label {
+  width: 100%;
+  overflow: hidden;
+}
+
    @media (max-width: 767.98px)
    {
     .font
