@@ -91,7 +91,7 @@
   <div class="card">
   <img id="img" class="card-img-top" src="{{i.img.url}}" alt="Card image">
   <div class="card-body">
-    <h4 value="{{i.user.username}}"class="card-title" style="color: #FFFFFF">{{i.user.username}}</h4> 
+    <h4 value="{{i.user.username}}"class="card-title" style="color: #FFFFFF;overflow-wrap: break-word;">{{i.user.username}}</h4> 
     <!-- <p  class="card-text" style=" width:200px; color:white; overflow-wrap: break-word;">{{i.about}}</p>  -->
     
     <form action="profile/<tager>">{% csrf_token %}
