@@ -109,11 +109,13 @@
  
  <h1 style="text-align:center;"><a style="color: #11EBF3;" class="font">HEAR FROM OUR TOP USER'S</a></h1>
 {% for i in obj reversed%}
-<ul class="list-group">
-  <li class="list-group-item"><b>NAME  :</b>{{i.name}}</li>
-  <li  style="overflow-wrap: break-word;"class="list-group-item"><b>COMMENT  :</b>{{i.comment}}</li>
+<div id="container">
+<div class="list-group">
+  <div class="list-group-item"><b>NAME  :</b>{{i.name}}</div>
+  <div  style="overflow-wrap: break-word;"class="list-group-item"><b>COMMENT  :</b>{{i.comment}}</div>
   <br>
- </ul>
+ </div>
+ </div>
 {% endfor %}
  </body>
 
@@ -143,54 +145,7 @@
       <li class="nav-item ">
         <a class="nav-link" style="color: #000000" href="/contactus"><div class="hello"><span class="material-icons">phonelink_ring</span>CONTACT US</div></a>
       </li>
-      <!--{% if request.user.is_superuser %}
-          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-         <li class="nav-item">
-          <a class="nav-link" href="/upload"><span class="material-icons">question_answer</span>BYTES UPLOAD</a>
-          </li>
-          <li class="nav-item">
-          <a class="nav-link" href="/uploadevents"><span class="material-icons">question_answer</span>EVENTS UPLOAD</a>
-          </li>
-          <li class="nav-item">
-          <a class="nav-link" href="/uploadproject"><span class="material-icons">question_answer</span>PROJECT UPLOAD</a>
-          </li>
-          <li class="nav-item">
-          <a class="nav-link" href="/addachievements"><span class="material-icons">question_answer</span>ACHIEVEMENTS UPLOAD</a>
-          </li>
-          <li class="nav-item">
-          <a class="nav-link" href="/reportnews"><span class="material-icons">question_answer</span>ADD NEWS</a>
-          </li>-->
-           <!--
-       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  ADMIN UPLOADS
-</button>
-
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">UPLOADS</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-         <a class="nav-link" href="/upload"><span class="material-icons">question_answer</span>BYTES UPLOAD</a>
-         <a class="nav-link" href="/uploadevents"><span class="material-icons">question_answer</span>EVENTS UPLOAD</a>
-         <a class="nav-link" href="/uploadproject"><span class="material-icons">question_answer</span>PROJECT UPLOAD</a>
-         <a class="nav-link" href="/reportnews"><span class="material-icons">question_answer</span>ADD NEWS</a>
-         <a class="nav-link" href="/addachievements"><span class="material-icons">question_answer</span>ACHIEVEMENTS UPLOAD</a
-      ></div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-      {% else %}
-      {% endif %}-->
+     
     </ul>
     <span class="navbar-text">
      <!--text here-->
@@ -209,14 +164,7 @@
      padding :00px;
     
    }
-   .container{
-     padding-top: 20px;
-    padding-right: 5px;
-    padding-bottom: 20px;
-    padding-left: 200px;
-
-
-   }
+   
    <style type="text/css">
    body 
    { background: yellow !important; 
@@ -224,19 +172,14 @@
    .hello:hover{
     color:red;
 }
-   .card{
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    padding-left: 0px;
-    margin-left:0px;
-    margin-right:0px;
-    margin-top:0px;
-    margin-bottom:0px;
-    background-color:#FF0000;
-    border-radius:0px;
-
-   } 
+   .list-group-item{
+     width:600px;
+     margin-right:200px;
+     margin-bottom:10px;
+     margin-left:20px;
+     
+     
+   }
    .font
    {
     font-size:100%;
@@ -247,31 +190,24 @@
     {
      font-size:50%;
     }
-   }
-   @media (max-width: 991.98px)
-   {
-    .font
-    {
-     font-size:40%;
-    }
-   }
-   @media (max-width: 1199.98px)
-   {
-    .font
-    {
-     font-size:60%;
-    }
+
+    .list-group-item{
+     width:300px;
+     
+     
    }
 
-   #navbarText{
+   }
+
+    #navbarText{
      font-size:12px;
    }
 
-   .list-group-item{
-     margin-right:200px;
-     margin-bottom:10px;
-     margin-left:200px;
-   }
+#navbarText{
+font-size:16px;
+}
+
+   
 </style>
 
    <!-- Optional JavaScript -->

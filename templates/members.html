@@ -16,11 +16,11 @@
   <!--NAV BAR--       <nav class="navbar navbar-dark bg-dark">     -->
  <nav class="navbar fixed-top navbar-dark bg-light">
   <nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
-<div style="width: 200px;">
+<div>
       <img style="width:200px ;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
       <button class="navbar-toggler" style="color: #000000" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span class="material-icons">menu</span>
        
-    <span class="navbar-toggler-icon"></span>
+ 
   </button>
   </div>
   <div class="collapse navbar-collapse" id="navbarText">
@@ -91,7 +91,7 @@
   <div class="card">
   <img id="img" class="card-img-top" src="{{i.img.url}}" alt="Card image">
   <div class="card-body">
-    <h4 value="{{i.user.username}}"class="card-title" style="color: #FFFFFF;overflow-wrap: break-word;">{{i.user.username}}</h4> 
+    <h4 value="{{i.user.username}}"class="card-title" style="overflow-wrap: break-word;color: #FFFFFF">{{i.user.username}}</h4> 
     <!-- <p  class="card-text" style=" width:200px; color:white; overflow-wrap: break-word;">{{i.about}}</p>  -->
     
     <form action="profile/<tager>">{% csrf_token %}
@@ -245,6 +245,10 @@
   #no{
     //display:none;
   }
+
+  #navbarText{
+font-size:16px;
+}
 </style>
 
    <!-- Optional JavaScript -->
