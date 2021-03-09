@@ -107,77 +107,77 @@
 <h1 style="text-align:center;color:#FFFFFF"><b>PANEL MEMBERS</b></h1>
 <!--<form action="profile/<tager>">{% csrf_token %}-->
 <div class="grid-container">
-  <div class="card">
+  <div class="cards">
     <img id="image" class="im" src="{% static 'images/CLUB HEAD.jpeg' %}" alt="Card image">
      <div class="overlay">
     <div class="text">CLUB HEAD</div>
   </div>
     <!--<button type="submit" name="test" value="1" class="btnm">{{obj1.user}}</button>-->
   </div>
-  <div  class="card">
+  <div  class="cards">
     <img id="image" class="im" src="{% static 'images/EVENTS HEAD.jpeg' %}" alt="Card image">
     <div class="overlay">
     <div class="text">EVENTS HEAD</div>
   </div>
     <!--<button type="submit" name="test" value="2" class="btnm">{{obj2.user}}</button>-->
   </div>
-  <div  class="card">
+  <div  class="cards">
     <img id="image" class="im" src="{% static 'images/HUMAN RESOURCES HEAD.jpeg' %}" alt="Card image">
     <div class="overlay">
     <div class="text">HUMAN RESOURCES HEAD</div>
   </div>
    <!-- <button type="submit" name="test" value="3" class="btnm">{{obj3.user}}</button>-->
   </div>
-  <div  class="card">
+  <div  class="cards">
     <img id="image" class="im" src="{% static 'images/DESIGN HEAD.jpeg' %}" alt="Card image">
     <div class="overlay">
     <div class="text">DESIGN HEAD</div>
   </div>
     <!--<button type="submit" name="test" value="4" class="btnm">{{obj4.user}}</button>-->
   </div>
-  <div class="card">
+  <div class="cards">
     <img id="image" class="im" src="{% static 'images/EDITORIAL HEAD.jpeg' %}" alt="Card image">
     <div class="overlay">
     <div class="text">EDITORIAL HEAD</div>
   </div>
     <!--<button type="submit" name="test" value="1" class="btnm">{{obj1.user}}</button>-->
   </div>
-  <div  class="card">
+  <div  class="cards">
     <img id="image" class="im" src="{% static 'images/PUBLIC RELATIONS HEAD.jpeg' %}" alt="Card image">
     <div class="overlay">
     <div class="text">PUBLIC RELATIONS HEAD</div>
   </div>
     <!--<button type="submit" name="test" value="2" class="btnm">{{obj2.user}}</button>-->
   </div>
-  <div  class="card">
+  <div  class="cards">
     <img id="image" class="im" src="{% static 'images/TECHNICAL HEAD.jpeg' %}" alt="Card image">
     <div class="overlay">
     <div class="text">TECHNICAL HEAD</div>
   </div>
    <!-- <button type="submit" name="test" value="3" class="btnm">{{obj3.user}}</button>-->
   </div>
-  <div  class="card">
+  <div  class="cards">
     <img id="image" class="im" src="{% static 'images/SOCIAL MEDIA HEAD.jpeg' %}" alt="Card image">
     <div class="overlay">
     <div class="text">SOCIAL MEDIA HEAD</div>
   </div>
     <!--<button type="submit" name="test" value="4" class="btnm">{{obj4.user}}</button>-->
   </div>
-  <div  class="card">
+  <div  class="cards">
     <img id="image" class="im" src="{% static 'images/SECRETARY.jpeg' %}" alt="Card image">
     <div class="overlay">
     <div class="text">SECRETARY HEAD</div>
   </div>
     <!--<button type="submit" name="test" value="4" class="btnm">{{obj4.user}}</button>-->
   </div>
-  <div  class="card">
+  <div  class="cards">
     <img id="image" class="im" src="{% static 'images/SPONSORSHIP HEAD.jpeg' %}" alt="Card image">
     <div class="overlay">
     <div class="text">SPONSORSHIP HEAD</div>
   </div>
     <!--<button type="submit" name="test" value="4" class="btnm">{{obj4.user}}</button>-->
   </div>
-  <div  class="card">
+  <div  class="cards">
     <img id="image" class="im" src="{% static 'images/FINANCE HEAD.jpeg' %}" alt="Card image">
     <div class="overlay">
     <div class="text">FINANCE HEAD</div>
@@ -304,6 +304,11 @@
     height:380px;
     margin-left:40%;
 }
+.cards{
+    width:350px;
+    height:380px;
+    margin-left:10%;
+}
 
 .cord{
     width:350px;
@@ -342,6 +347,11 @@
   -ms-transform: scale(1);
   transform: scale(1);
 }
+.cards:hover .overlay {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
 
 .text {
   color: white;
@@ -376,6 +386,11 @@
     margin-left:15%;
     margin-bottom:15%;
     
+}
+.cards{
+    width:350px;
+    height:380px;
+    margin-left:10%;
 }
 .cord{
     width:350px;
@@ -423,6 +438,11 @@
 }
 
 .card:hover .overlay {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.cards:hover .overlay {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
@@ -575,6 +595,22 @@
     height:246px;
     width:278px;
    } 
+   .cards{
+    padding-top: 0%;
+    grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+    padding-right: 0%;
+    padding-bottom: 0%;
+    padding-left: 0%;
+    margin-left:10%;
+    margin-right:15%;
+    margin-top:0%;
+    margin-bottom:15%;
+    background-color:#7F7F89;
+    border-radius:4%;
+    height:246px;
+    width:278px;
+}
    /*LAST CARDS FOR MEMEBERS*/
 .grid-containers
 {
