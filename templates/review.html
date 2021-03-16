@@ -85,6 +85,7 @@
   <br><br>
   {% if request.user.is_authenticated %}
   <h1 style="text-align:center;"><a style="color: #11EBF3" class="font">We value your opinion,Tell us anything we can take care of!</a></h1>
+  <div class="comment">
 <form action="add_comment/">{% csrf_token %}
 <div class="input-group">
   <div class="input-group-prepend">
@@ -103,20 +104,18 @@
 <button type="submit" class="btn btn-primary">Submit</button>
 {% else %}
 {% endif %}
-
-
 </form>
- 
+ </div>
  <h1 style="text-align:center;"><a style="color: #11EBF3;" class="font">HEAR FROM OUR TOP USER'S</a></h1>
+<div class="comment">
 {% for i in obj reversed%}
-<div id="container">
 <div class="list-group">
   <div class="list-group-item"><b>NAME  :</b>{{i.name}}</div>
   <div  style="overflow-wrap: break-word;"class="list-group-item"><b>COMMENT  :</b>{{i.comment}}</div>
   <br>
  </div>
- </div>
 {% endfor %}
+</div>
  </body>
 
 
@@ -169,45 +168,19 @@
    body 
    { background: yellow !important; 
    }
+   .comment
+   {
+    width:70%;
+    margin-left:15%;
+   }
    .hello:hover{
     color:red;
-}
-   .list-group-item{
-     width:600px;
-     margin-right:200px;
-     margin-bottom:10px;
-     margin-left:20px;
-     
-     
-   }
+  }
+
    .font
    {
     font-size:100%;
    }
-   @media (max-width: 767.98px)
-   {
-    .font
-    {
-     font-size:50%;
-    }
-
-    .list-group-item{
-     width:300px;
-     
-     
-   }
-
-   }
-
-    #navbarText{
-     font-size:12px;
-   }
-
-#navbarText{
-font-size:16px;
-}
-
-   
 </style>
 
    <!-- Optional JavaScript -->
